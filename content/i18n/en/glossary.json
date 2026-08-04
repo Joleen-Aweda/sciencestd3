@@ -1,0 +1,2635 @@
+{
+  "absorb": {
+    "word": "absorb",
+    "definition": "to take in or soak up something such as water or nutrients",
+    "variations": [
+      "absorb",
+      "absorbs",
+      "absorbed",
+      "absorbing"
+    ],
+    "emoji": "💧🌱"
+  },
+  "adulthood": {
+    "word": "adulthood",
+    "definition": "the stage of life when a person is fully grown",
+    "variations": [
+      "adulthood"
+    ],
+    "emoji": "🧑✅"
+  },
+  "advantage": {
+    "word": "advantage",
+    "definition": "a good thing or benefit that helps you",
+    "variations": [
+      "advantage",
+      "advantages"
+    ],
+    "emoji": "✅🌟"
+  },
+  "amphibian": {
+    "word": "amphibian",
+    "definition": "a vertebrate animal that can live in water and on land",
+    "variations": [
+      "amphibian",
+      "amphibians"
+    ],
+    "emoji": "🐸💧"
+  },
+  "amphibians": {
+    "word": "amphibians",
+    "definition": "animals that can live both on land and in water",
+    "variations": [
+      "amphibian",
+      "amphibians"
+    ],
+    "emoji": "🐸💧🌿"
+  },
+  "analysis": {
+    "word": "analysis",
+    "definition": "careful study of information to understand it",
+    "variations": [
+      "analysis",
+      "analyses",
+      "analyze",
+      "analysing",
+      "analyzing"
+    ],
+    "emoji": "📈🧠"
+  },
+  "application": {
+    "word": "application",
+    "definition": "the use of something for a purpose",
+    "variations": [
+      "application",
+      "applications",
+      "apply"
+    ],
+    "emoji": "📱🛠️"
+  },
+  "artwork": {
+    "word": "artwork",
+    "definition": "a picture or object made through drawing, painting, or other creative work",
+    "variations": [
+      "artwork",
+      "artworks"
+    ],
+    "emoji": "🎨🖼️"
+  },
+  "attempt": {
+    "word": "attempt",
+    "definition": "to try to do something",
+    "variations": [
+      "attempt",
+      "attempts",
+      "attempted",
+      "attempting"
+    ],
+    "emoji": "🤞💪"
+  },
+  "backbone": {
+    "word": "backbone",
+    "definition": "the row of bones along the back that supports the body",
+    "variations": [
+      "backbone",
+      "backbones"
+    ],
+    "emoji": "🦴"
+  },
+  "beak": {
+    "word": "beak",
+    "definition": "the hard pointed mouth of a bird",
+    "variations": [
+      "beak",
+      "beaks"
+    ],
+    "emoji": "🐦🔺"
+  },
+  "biology": {
+    "word": "biology",
+    "definition": "the branch of science that studies living things such as plants and animals",
+    "variations": [
+      "biology",
+      "biological",
+      "biologist",
+      "biologists"
+    ],
+    "emoji": "🌱🐒🔬"
+  },
+  "bird": {
+    "word": "bird",
+    "definition": "a vertebrate animal with feathers, wings, and a beak",
+    "variations": [
+      "bird",
+      "birds"
+    ],
+    "emoji": "🐦🪶"
+  },
+  "bitter": {
+    "word": "bitter",
+    "definition": "having a strong sharp taste that is not sweet, like some medicine or coffee",
+    "variations": [
+      "bitter",
+      "bitterer",
+      "bitterest"
+    ],
+    "emoji": "☕😣"
+  },
+  "blindness": {
+    "word": "blindness",
+    "definition": "the condition of not being able to see",
+    "variations": [
+      "blindness",
+      "blind"
+    ],
+    "emoji": "👁️🚫"
+  },
+  "botanist": {
+    "word": "botanist",
+    "definition": "a scientist who studies plants",
+    "variations": [
+      "botanist",
+      "botanists"
+    ],
+    "emoji": "🌱🔬"
+  },
+  "botany": {
+    "word": "botany",
+    "definition": "the science that studies plants",
+    "variations": [
+      "botany"
+    ],
+    "emoji": "🌱📘"
+  },
+  "brain": {
+    "word": "brain",
+    "definition": "the organ in the head that receives information and helps the body think, learn, and respond",
+    "variations": [
+      "brain",
+      "brains"
+    ],
+    "emoji": "🧠"
+  },
+  "branch": {
+    "word": "branch",
+    "definition": "one part or division of a subject",
+    "variations": [
+      "branch",
+      "branches"
+    ],
+    "emoji": "🌿📚"
+  },
+  "breathing": {
+    "word": "breathing",
+    "definition": "taking air into the body and letting it out",
+    "variations": [
+      "breathe",
+      "breathes",
+      "breathing",
+      "breathed"
+    ],
+    "emoji": "🌬️🫁"
+  },
+  "carbohydrates": {
+    "word": "carbohydrates",
+    "definition": "nutrients that give the body energy",
+    "variations": [
+      "carbohydrate",
+      "carbohydrates"
+    ],
+    "emoji": "🍞⚡"
+  },
+  "carbon dioxide": {
+    "word": "carbon dioxide",
+    "definition": "a gas that living things give out, and plants use to make food",
+    "variations": [
+      "carbon dioxide"
+    ],
+    "emoji": "🌿💨"
+  },
+  "career": {
+    "word": "career",
+    "definition": "a job or profession that a person trains for and does for a long time",
+    "variations": [
+      "career",
+      "careers"
+    ],
+    "emoji": "💼🎓"
+  },
+  "cartilage": {
+    "word": "cartilage",
+    "definition": "a strong but flexible body tissue that supports some parts of the body, such as the nose and ears",
+    "variations": [
+      "cartilage",
+      "cartilages"
+    ],
+    "emoji": "🦴👃"
+  },
+  "challenging": {
+    "word": "challenging",
+    "definition": "difficult in a way that tests your skill",
+    "variations": [
+      "challenge",
+      "challenging",
+      "challenged"
+    ],
+    "emoji": "🧗🔥"
+  },
+  "chapter": {
+    "word": "chapter",
+    "definition": "one main part of a book",
+    "variations": [
+      "chapter",
+      "chapters"
+    ],
+    "emoji": "📖"
+  },
+  "characteristic": {
+    "word": "characteristic",
+    "definition": "a feature or quality that helps describe something",
+    "variations": [
+      "characteristic",
+      "characteristics"
+    ],
+    "emoji": "🔎📘"
+  },
+  "characteristics": {
+    "word": "characteristics",
+    "definition": "the features or qualities that help describe something",
+    "variations": [
+      "characteristic",
+      "characteristics"
+    ],
+    "emoji": "📋🔍"
+  },
+  "chemist": {
+    "word": "chemist",
+    "definition": "a scientist who studies chemistry",
+    "variations": [
+      "chemist",
+      "chemists"
+    ],
+    "emoji": "🧪🔬"
+  },
+  "chemistry": {
+    "word": "chemistry",
+    "definition": "the branch of science that studies matter, what it is made of, its properties, and how it changes",
+    "variations": [
+      "chemistry",
+      "chemical",
+      "chemicals",
+      "chemist",
+      "chemists"
+    ],
+    "emoji": "🧪⚗️🔬"
+  },
+  "childhood": {
+    "word": "childhood",
+    "definition": "the stage of life when a person is a child",
+    "variations": [
+      "childhood"
+    ],
+    "emoji": "🧒🎈"
+  },
+  "clinic": {
+    "word": "clinic",
+    "definition": "a place where people go for medical check-ups or treatment",
+    "variations": [
+      "clinic",
+      "clinics"
+    ],
+    "emoji": "🏥🩺"
+  },
+  "cold-blooded": {
+    "word": "cold-blooded",
+    "definition": "having a body temperature that changes with the temperature of the environment",
+    "variations": [
+      "cold-blooded"
+    ],
+    "emoji": "🦎🌡️"
+  },
+  "communication": {
+    "word": "communication",
+    "definition": "sharing information or talking with others",
+    "variations": [
+      "communication",
+      "communications",
+      "communicate"
+    ],
+    "emoji": "📞💬"
+  },
+  "competency": {
+    "word": "competency",
+    "definition": "an ability or skill to do something well",
+    "variations": [
+      "competency",
+      "competencies"
+    ],
+    "emoji": "🏅🧠"
+  },
+  "composition": {
+    "word": "composition",
+    "definition": "what something is made of",
+    "variations": [
+      "composition",
+      "compositions",
+      "compose",
+      "composed"
+    ],
+    "emoji": "🧪🧩"
+  },
+  "concept": {
+    "word": "concept",
+    "definition": "an idea or thought about something",
+    "variations": [
+      "concept",
+      "concepts"
+    ],
+    "emoji": "💡"
+  },
+  "conclusion": {
+    "word": "conclusion",
+    "definition": "the answer or decision reached after studying results",
+    "variations": [
+      "conclusion",
+      "conclusions"
+    ],
+    "emoji": "✅📘"
+  },
+  "confidence": {
+    "word": "confidence",
+    "definition": "the feeling that you can do something well",
+    "variations": [
+      "confidence"
+    ],
+    "emoji": "💪😊"
+  },
+  "construct": {
+    "word": "construct",
+    "definition": "to build or put something together",
+    "variations": [
+      "construct",
+      "constructs",
+      "constructed",
+      "constructing"
+    ],
+    "emoji": "🏗️🧱"
+  },
+  "control panel": {
+    "word": "control panel",
+    "definition": "the part of a program or device that has buttons or tools used to control it",
+    "variations": [
+      "control panel",
+      "control panels"
+    ],
+    "emoji": "🎛️🖥️"
+  },
+  "creativity": {
+    "word": "creativity",
+    "definition": "the ability to make new ideas or create things in an imaginative way",
+    "variations": [
+      "creativity",
+      "creative",
+      "creatively"
+    ],
+    "emoji": "💡🎨✨"
+  },
+  "critical thinking": {
+    "word": "critical thinking",
+    "definition": "careful thinking used to understand, judge, and solve problems",
+    "variations": [
+      "critical thinking"
+    ],
+    "emoji": "🧠🤔"
+  },
+  "data": {
+    "word": "data",
+    "definition": "facts or information collected during an investigation",
+    "variations": [
+      "data"
+    ],
+    "emoji": "📊📝"
+  },
+  "deafness": {
+    "word": "deafness",
+    "definition": "the condition of not being able to hear well or at all",
+    "variations": [
+      "deafness",
+      "deaf"
+    ],
+    "emoji": "👂🔇"
+  },
+  "decoding": {
+    "word": "decoding",
+    "definition": "changing a sign or symbol into a language that can be understood",
+    "variations": [
+      "decode",
+      "decodes",
+      "decoded",
+      "decoding"
+    ],
+    "emoji": "🔍🔠"
+  },
+  "dermis": {
+    "word": "dermis",
+    "definition": "the middle layer of the skin under the epidermis",
+    "variations": [
+      "dermis",
+      "dermises"
+    ],
+    "emoji": "🧍"
+  },
+  "desktop computer": {
+    "word": "desktop computer",
+    "definition": "a computer that usually stays on a desk and is used in one place",
+    "variations": [
+      "desktop computer",
+      "desktop computers"
+    ],
+    "emoji": "🖥️⌨️"
+  },
+  "development": {
+    "word": "development",
+    "definition": "the process of changing and becoming more mature",
+    "variations": [
+      "development",
+      "develop",
+      "develops",
+      "developing",
+      "developed"
+    ],
+    "emoji": "🌱➡️"
+  },
+  "device": {
+    "word": "device",
+    "definition": "a tool or machine made for a special purpose",
+    "variations": [
+      "device",
+      "devices"
+    ],
+    "emoji": "📱💻"
+  },
+  "diagnosis": {
+    "word": "diagnosis",
+    "definition": "the act of finding out what disease or problem someone has",
+    "variations": [
+      "diagnosis",
+      "diagnoses",
+      "diagnose",
+      "diagnosed"
+    ],
+    "emoji": "🩺🔍"
+  },
+  "direction": {
+    "word": "direction",
+    "definition": "the way something moves, points, or faces",
+    "variations": [
+      "direction",
+      "directions"
+    ],
+    "emoji": "🧭➡️"
+  },
+  "disperse": {
+    "word": "disperse",
+    "definition": "to spread things, such as seeds, to different places",
+    "variations": [
+      "disperse",
+      "disperses",
+      "dispersed",
+      "dispersing"
+    ],
+    "emoji": "🌬️🌱"
+  },
+  "domestic": {
+    "word": "domestic",
+    "definition": "kept by people at home or on farms",
+    "variations": [
+      "domestic"
+    ],
+    "emoji": "🏠🐔"
+  },
+  "download": {
+    "word": "download",
+    "definition": "to copy a file or program from the internet onto your device",
+    "variations": [
+      "download",
+      "downloads",
+      "downloaded",
+      "downloading"
+    ],
+    "emoji": "⬇️📥"
+  },
+  "drag and drop": {
+    "word": "drag and drop",
+    "definition": "to move something on a screen by holding it and placing it somewhere else",
+    "variations": [
+      "drag and drop",
+      "drag",
+      "drop",
+      "dragging",
+      "dropping"
+    ],
+    "emoji": "🖱️↔️"
+  },
+  "duration": {
+    "word": "duration",
+    "definition": "the length of time something lasts",
+    "variations": [
+      "duration"
+    ],
+    "emoji": "⏱️🕒"
+  },
+  "ear": {
+    "word": "ear",
+    "definition": "the organ used for hearing sounds",
+    "variations": [
+      "ear",
+      "ears"
+    ],
+    "emoji": "👂🎵"
+  },
+  "ear wax": {
+    "word": "ear wax",
+    "definition": "a yellowish substance in the ear that helps stop dust and dirt from going inside",
+    "variations": [
+      "ear wax",
+      "earwax"
+    ],
+    "emoji": "👂🛡️"
+  },
+  "eardrum": {
+    "word": "eardrum",
+    "definition": "a thin part inside the ear that vibrates when sound enters",
+    "variations": [
+      "eardrum",
+      "eardrums"
+    ],
+    "emoji": "👂🥁"
+  },
+  "earthquake": {
+    "word": "earthquake",
+    "definition": "a sudden shaking of the ground",
+    "variations": [
+      "earthquake",
+      "earthquakes"
+    ],
+    "emoji": "🌍震"
+  },
+  "elderly": {
+    "word": "elderly",
+    "definition": "old people or the stage of life when a person is old",
+    "variations": [
+      "elderly"
+    ],
+    "emoji": "👵👴"
+  },
+  "electric energy": {
+    "word": "electric energy",
+    "definition": "energy carried by electricity and used to power devices",
+    "variations": [
+      "electric energy",
+      "electrical energy",
+      "electricity"
+    ],
+    "emoji": "⚡🔌"
+  },
+  "elongation": {
+    "word": "elongation",
+    "definition": "the process of becoming longer",
+    "variations": [
+      "elongation",
+      "elongate",
+      "elongates",
+      "elongating"
+    ],
+    "emoji": "📏🌿"
+  },
+  "encoding": {
+    "word": "encoding",
+    "definition": "changing language or information into signs, symbols, or code",
+    "variations": [
+      "encode",
+      "encodes",
+      "encoded",
+      "encoding"
+    ],
+    "emoji": "🔐🔣"
+  },
+  "energy": {
+    "word": "energy",
+    "definition": "the ability to do work or make things happen",
+    "variations": [
+      "energy",
+      "energies"
+    ],
+    "emoji": "⚡🔋"
+  },
+  "engineer": {
+    "word": "engineer",
+    "definition": "a person who designs and builds things such as bridges, buildings, or machines",
+    "variations": [
+      "engineer",
+      "engineers"
+    ],
+    "emoji": "👷🏗️"
+  },
+  "engineering": {
+    "word": "engineering",
+    "definition": "the work of designing and building machines, structures, or systems",
+    "variations": [
+      "engineering",
+      "engineer",
+      "engineers"
+    ],
+    "emoji": "🏗️⚙️"
+  },
+  "environment": {
+    "word": "environment",
+    "definition": "the surroundings and conditions in which living and non-living things exist",
+    "variations": [
+      "environment",
+      "environments"
+    ],
+    "emoji": "🌍🏞️"
+  },
+  "epidermis": {
+    "word": "epidermis",
+    "definition": "the upper or outer layer of the skin",
+    "variations": [
+      "epidermis",
+      "epidermises"
+    ],
+    "emoji": "🧍🔝"
+  },
+  "equipment": {
+    "word": "equipment",
+    "definition": "tools or machines used for a purpose",
+    "variations": [
+      "equipment"
+    ],
+    "emoji": "🧰⚙️"
+  },
+  "error": {
+    "word": "error",
+    "definition": "a mistake",
+    "variations": [
+      "error",
+      "errors"
+    ],
+    "emoji": "❌⚠️"
+  },
+  "essential": {
+    "word": "essential",
+    "definition": "very important or necessary",
+    "variations": [
+      "essential",
+      "essentials"
+    ],
+    "emoji": "⭐✔️"
+  },
+  "excretion": {
+    "word": "excretion",
+    "definition": "the process of removing waste from a living thing",
+    "variations": [
+      "excretion",
+      "excrete",
+      "excretes",
+      "excreted"
+    ],
+    "emoji": "🌿🚰"
+  },
+  "exercise": {
+    "word": "exercise",
+    "definition": "a task or set of questions for practice",
+    "variations": [
+      "exercise",
+      "exercises"
+    ],
+    "emoji": "✍️📚"
+  },
+  "exit": {
+    "word": "exit",
+    "definition": "the way out of a place or game",
+    "variations": [
+      "exit",
+      "exits"
+    ],
+    "emoji": "🚪🏃"
+  },
+  "experiment": {
+    "word": "experiment",
+    "definition": "a test done to find out if an idea is true",
+    "variations": [
+      "experiment",
+      "experiments",
+      "experimental"
+    ],
+    "emoji": "🧪🔬"
+  },
+  "experimentation": {
+    "word": "experimentation",
+    "definition": "the process of testing ideas to see what happens",
+    "variations": [
+      "experimentation",
+      "experiment",
+      "experiments"
+    ],
+    "emoji": "🧪🔬"
+  },
+  "eyebrow": {
+    "word": "eyebrow",
+    "definition": "the line of hair above the eye that helps keep sweat and dust out",
+    "variations": [
+      "eyebrow",
+      "eyebrows"
+    ],
+    "emoji": "👁️🛡️"
+  },
+  "eyelash": {
+    "word": "eyelash",
+    "definition": "one of the small hairs on the edge of the eyelid that helps protect the eye",
+    "variations": [
+      "eyelash",
+      "eyelashes"
+    ],
+    "emoji": "👁️🪶"
+  },
+  "eyelid": {
+    "word": "eyelid",
+    "definition": "the skin that covers and protects the eye",
+    "variations": [
+      "eyelid",
+      "eyelids"
+    ],
+    "emoji": "👁️🛡️"
+  },
+  "fats": {
+    "word": "fats",
+    "definition": "nutrients that store energy and help protect the body",
+    "variations": [
+      "fat",
+      "fats"
+    ],
+    "emoji": "🧈⚡"
+  },
+  "feather": {
+    "word": "feather",
+    "definition": "one of the soft, light coverings on a bird's body",
+    "variations": [
+      "feather",
+      "feathers"
+    ],
+    "emoji": "🪶🐦"
+  },
+  "feathers": {
+    "word": "feathers",
+    "definition": "soft body coverings that grow on birds",
+    "variations": [
+      "feather",
+      "feathers"
+    ],
+    "emoji": "🪶🐦"
+  },
+  "fertile": {
+    "word": "fertile",
+    "definition": "able to help plants grow well",
+    "variations": [
+      "fertile",
+      "fertility"
+    ],
+    "emoji": "🌿🌍"
+  },
+  "fin": {
+    "word": "fin",
+    "definition": "a flat body part that helps a fish swim and turn",
+    "variations": [
+      "fin",
+      "fins"
+    ],
+    "emoji": "🐟🌊"
+  },
+  "fins": {
+    "word": "fins",
+    "definition": "flat body parts that help fish swim",
+    "variations": [
+      "fin",
+      "fins"
+    ],
+    "emoji": "🐟🌊"
+  },
+  "fish": {
+    "word": "fish",
+    "definition": "a water animal with gills and fins",
+    "variations": [
+      "fish",
+      "fishes"
+    ],
+    "emoji": "🐟🌊"
+  },
+  "flag": {
+    "word": "flag",
+    "definition": "a marked sign or object used as a target or end point in a game",
+    "variations": [
+      "flag",
+      "flags"
+    ],
+    "emoji": "🏳️🚩"
+  },
+  "flowering plant": {
+    "word": "flowering plant",
+    "definition": "a plant that makes flowers",
+    "variations": [
+      "flowering plant",
+      "flowering plants"
+    ],
+    "emoji": "🌸🌿"
+  },
+  "flowering plants": {
+    "word": "flowering plants",
+    "definition": "plants that produce flowers",
+    "variations": [
+      "flowering plant",
+      "flowering plants"
+    ],
+    "emoji": "🌸🌼"
+  },
+  "function": {
+    "word": "function",
+    "definition": "a job or task that something is made to do; in computing, a part of a program that does a specific task",
+    "variations": [
+      "function",
+      "functions"
+    ],
+    "emoji": "⚙️💻"
+  },
+  "gas": {
+    "word": "gas",
+    "definition": "a state of matter that spreads out and fills the space around it",
+    "variations": [
+      "gas",
+      "gases"
+    ],
+    "emoji": "💨🎈"
+  },
+  "gaseous exchange": {
+    "word": "gaseous exchange",
+    "definition": "the movement of gases like oxygen and carbon dioxide in and out of living things",
+    "variations": [
+      "gaseous exchange"
+    ],
+    "emoji": "💨🌿"
+  },
+  "generation": {
+    "word": "generation",
+    "definition": "a group of living things born and living at about the same time",
+    "variations": [
+      "generation",
+      "generations"
+    ],
+    "emoji": "👨‍👩‍👧‍👦🔄"
+  },
+  "germinate": {
+    "word": "germinate",
+    "definition": "to begin to grow from a seed",
+    "variations": [
+      "germinate",
+      "germinates",
+      "germinated",
+      "germinating"
+    ],
+    "emoji": "🌱💧"
+  },
+  "germination": {
+    "word": "germination",
+    "definition": "the process where a seed begins to grow into a plant",
+    "variations": [
+      "germination",
+      "germinate",
+      "germinated",
+      "germinates"
+    ],
+    "emoji": "🌱🌾"
+  },
+  "gill": {
+    "word": "gill",
+    "definition": "a body part used by fish and some young amphibians to breathe in water",
+    "variations": [
+      "gill",
+      "gills"
+    ],
+    "emoji": "🐟💧"
+  },
+  "goal": {
+    "word": "goal",
+    "definition": "something you are trying to achieve",
+    "variations": [
+      "goal",
+      "goals"
+    ],
+    "emoji": "🎯🏁"
+  },
+  "grid": {
+    "word": "grid",
+    "definition": "a pattern of crossing lines that makes squares",
+    "variations": [
+      "grid",
+      "grids"
+    ],
+    "emoji": "🔲📐"
+  },
+  "growth": {
+    "word": "growth",
+    "definition": "an increase in size and development in a living thing",
+    "variations": [
+      "growth",
+      "grow",
+      "grows",
+      "growing",
+      "grown"
+    ],
+    "emoji": "🌱📈"
+  },
+  "guide": {
+    "word": "guide",
+    "definition": "to lead or show the way",
+    "variations": [
+      "guide",
+      "guides",
+      "guided",
+      "guiding"
+    ],
+    "emoji": "🧭👣"
+  },
+  "hearing": {
+    "word": "hearing",
+    "definition": "the ability to detect sound using the ears",
+    "variations": [
+      "hear",
+      "hears",
+      "hearing",
+      "heard"
+    ],
+    "emoji": "👂🔊"
+  },
+  "heat": {
+    "word": "heat",
+    "definition": "a form of energy that makes things warm or hot",
+    "variations": [
+      "heat",
+      "heats",
+      "heated",
+      "heating"
+    ],
+    "emoji": "🔥🌡️"
+  },
+  "hypothesis": {
+    "word": "hypothesis",
+    "definition": "a smart guess that can be tested to explain something",
+    "variations": [
+      "hypothesis",
+      "hypotheses"
+    ],
+    "emoji": "🤔🧪"
+  },
+  "ICT": {
+    "word": "ICT",
+    "definition": "the use of computers and other electronic devices to get, store, and share information",
+    "variations": [
+      "ICT",
+      "Information and Communication Technology"
+    ],
+    "emoji": "💻📱🌐"
+  },
+  "identical": {
+    "word": "identical",
+    "definition": "exactly the same",
+    "variations": [
+      "identical"
+    ],
+    "emoji": "🟰👯"
+  },
+  "illustration": {
+    "word": "illustration",
+    "definition": "a picture that helps explain something",
+    "variations": [
+      "illustration",
+      "illustrations"
+    ],
+    "emoji": "🖼️"
+  },
+  "infancy": {
+    "word": "infancy",
+    "definition": "the earliest stage of life when a human is a baby",
+    "variations": [
+      "infancy"
+    ],
+    "emoji": "👶🍼"
+  },
+  "inquiry": {
+    "word": "inquiry",
+    "definition": "the act of asking questions to learn more",
+    "variations": [
+      "inquiry",
+      "inquiries"
+    ],
+    "emoji": "❓🔎"
+  },
+  "insect": {
+    "word": "insect",
+    "definition": "a small animal with six legs, such as an ant or butterfly",
+    "variations": [
+      "insect",
+      "insects"
+    ],
+    "emoji": "🐜🦋"
+  },
+  "instruction": {
+    "word": "instruction",
+    "definition": "a direction or command that tells what to do",
+    "variations": [
+      "instruction",
+      "instructions"
+    ],
+    "emoji": "📋➡️"
+  },
+  "instrument": {
+    "word": "instrument",
+    "definition": "a tool used for scientific work or other tasks",
+    "variations": [
+      "instrument",
+      "instruments"
+    ],
+    "emoji": "🛠️🔬"
+  },
+  "interdependence": {
+    "word": "interdependence",
+    "definition": "the way living things depend on each other",
+    "variations": [
+      "interdependence",
+      "interdependent"
+    ],
+    "emoji": "🤝🌍"
+  },
+  "internet": {
+    "word": "internet",
+    "definition": "the worldwide network that connects computers and other digital devices so they can share information and communicate",
+    "variations": [
+      "internet"
+    ],
+    "emoji": "🌐💻📡"
+  },
+  "interpretation": {
+    "word": "interpretation",
+    "definition": "the act of explaining the meaning of information or results",
+    "variations": [
+      "interpretation",
+      "interpretations",
+      "interpret",
+      "interpreted"
+    ],
+    "emoji": "🧠📖"
+  },
+  "invertebrate": {
+    "word": "invertebrate",
+    "definition": "an animal without a backbone",
+    "variations": [
+      "invertebrate",
+      "invertebrates"
+    ],
+    "emoji": "🪱🦋"
+  },
+  "invertebrates": {
+    "word": "invertebrates",
+    "definition": "animals that do not have a backbone",
+    "variations": [
+      "invertebrate",
+      "invertebrates"
+    ],
+    "emoji": "🐌🪱"
+  },
+  "investigation": {
+    "word": "investigation",
+    "definition": "a careful study or search to find answers to a problem or question",
+    "variations": [
+      "investigation",
+      "investigations"
+    ],
+    "emoji": "🔍🧠"
+  },
+  "iris": {
+    "word": "iris",
+    "definition": "the coloured part of the eye that controls how much light enters",
+    "variations": [
+      "iris",
+      "irises"
+    ],
+    "emoji": "👁️🌈"
+  },
+  "kidney": {
+    "word": "kidney",
+    "definition": "an organ that helps remove waste from the blood and makes urine",
+    "variations": [
+      "kidney",
+      "kidneys"
+    ],
+    "emoji": "🩺💧"
+  },
+  "knowledge": {
+    "word": "knowledge",
+    "definition": "information and understanding gained by learning",
+    "variations": [
+      "knowledge"
+    ],
+    "emoji": "🧠📘"
+  },
+  "laboratory": {
+    "word": "laboratory",
+    "definition": "a room or building where scientific experiments and research are done",
+    "variations": [
+      "laboratory",
+      "laboratories",
+      "lab",
+      "labs"
+    ],
+    "emoji": "🧪🔬"
+  },
+  "laptop": {
+    "word": "laptop",
+    "definition": "a small computer that can be carried easily",
+    "variations": [
+      "laptop",
+      "laptops"
+    ],
+    "emoji": "💻🎒"
+  },
+  "latex": {
+    "word": "latex",
+    "definition": "a milky liquid produced by some plants",
+    "variations": [
+      "latex"
+    ],
+    "emoji": "🌿🥛"
+  },
+  "layout": {
+    "word": "layout",
+    "definition": "the way parts are arranged or set out",
+    "variations": [
+      "layout",
+      "layouts"
+    ],
+    "emoji": "🗺️📐"
+  },
+  "leaves": {
+    "word": "leaves",
+    "definition": "the flat green parts of a plant that make food",
+    "variations": [
+      "leaf",
+      "leaves"
+    ],
+    "emoji": "🍃🌿"
+  },
+  "length": {
+    "word": "length",
+    "definition": "how long something is from one end to the other",
+    "variations": [
+      "length",
+      "lengths"
+    ],
+    "emoji": "📏"
+  },
+  "lens": {
+    "word": "lens",
+    "definition": "the clear part of the eye that focuses light so we can see clearly",
+    "variations": [
+      "lens",
+      "lenses"
+    ],
+    "emoji": "👁️🔍"
+  },
+  "level": {
+    "word": "level",
+    "definition": "a stage or step in a game or activity",
+    "variations": [
+      "level",
+      "levels"
+    ],
+    "emoji": "🎮📈"
+  },
+  "light": {
+    "word": "light",
+    "definition": "a form of energy that helps us see",
+    "variations": [
+      "light",
+      "lights",
+      "lighting"
+    ],
+    "emoji": "💡☀️"
+  },
+  "limb": {
+    "word": "limb",
+    "definition": "a leg or arm of an animal or person",
+    "variations": [
+      "limb",
+      "limbs"
+    ],
+    "emoji": "🦵🐾"
+  },
+  "liquid": {
+    "word": "liquid",
+    "definition": "a state of matter that can flow and takes the shape of its container",
+    "variations": [
+      "liquid",
+      "liquids"
+    ],
+    "emoji": "💧🥛"
+  },
+  "living": {
+    "word": "living",
+    "definition": "alive; able to grow, breathe, and reproduce",
+    "variations": [
+      "living"
+    ],
+    "emoji": "🌱🐄"
+  },
+  "living thing": {
+    "word": "living thing",
+    "definition": "anything that is alive, such as a plant or an animal",
+    "variations": [
+      "living thing",
+      "living things"
+    ],
+    "emoji": "🌱🐄"
+  },
+  "living things": {
+    "word": "living things",
+    "definition": "things that have life",
+    "variations": [
+      "living thing",
+      "living things"
+    ],
+    "emoji": "🌱🐄"
+  },
+  "logic": {
+    "word": "logic",
+    "definition": "a clear and sensible way of thinking based on good reasons",
+    "variations": [
+      "logic",
+      "logical",
+      "logically"
+    ],
+    "emoji": "🧠✅"
+  },
+  "lung": {
+    "word": "lung",
+    "definition": "an organ used for breathing",
+    "variations": [
+      "lung",
+      "lungs"
+    ],
+    "emoji": "🫁🌬️"
+  },
+  "lungs": {
+    "word": "lungs",
+    "definition": "organs in the chest that help the body breathe",
+    "variations": [
+      "lung",
+      "lungs"
+    ],
+    "emoji": "🫁🌬️"
+  },
+  "machine": {
+    "word": "machine",
+    "definition": "a device that helps people do work more easily",
+    "variations": [
+      "machine",
+      "machines"
+    ],
+    "emoji": "⚙️🔧"
+  },
+  "mammal": {
+    "word": "mammal",
+    "definition": "a vertebrate animal that usually has hair or fur and feeds its young with milk",
+    "variations": [
+      "mammal",
+      "mammals"
+    ],
+    "emoji": "🐄🐘"
+  },
+  "mammals": {
+    "word": "mammals",
+    "definition": "animals that feed their young with milk from the mother",
+    "variations": [
+      "mammal",
+      "mammals"
+    ],
+    "emoji": "🐘🐄"
+  },
+  "mammary glands": {
+    "word": "mammary glands",
+    "definition": "parts of a female mammal's body that make milk for feeding the young",
+    "variations": [
+      "mammary gland",
+      "mammary glands"
+    ],
+    "emoji": "🥛🐄"
+  },
+  "mass": {
+    "word": "mass",
+    "definition": "the amount of matter in something; how heavy it is",
+    "variations": [
+      "mass",
+      "masses"
+    ],
+    "emoji": "⚖️"
+  },
+  "materials": {
+    "word": "materials",
+    "definition": "the things or equipment needed to do an activity or experiment",
+    "variations": [
+      "material",
+      "materials"
+    ],
+    "emoji": "🧰📦"
+  },
+  "matter": {
+    "word": "matter",
+    "definition": "anything that has weight and takes up space",
+    "variations": [
+      "matter"
+    ],
+    "emoji": "⚛️📦"
+  },
+  "mature": {
+    "word": "mature",
+    "definition": "fully grown or fully developed",
+    "variations": [
+      "mature",
+      "matures",
+      "matured",
+      "maturing"
+    ],
+    "emoji": "🌳✅"
+  },
+  "maturity": {
+    "word": "maturity",
+    "definition": "the stage when a living thing is fully grown",
+    "variations": [
+      "maturity",
+      "mature"
+    ],
+    "emoji": "✅🌳"
+  },
+  "maze": {
+    "word": "maze",
+    "definition": "a place or game with many paths where you must find the correct way",
+    "variations": [
+      "maze",
+      "mazes"
+    ],
+    "emoji": "🌀🧩"
+  },
+  "measurement": {
+    "word": "measurement",
+    "definition": "the act of finding the size, amount, or weight of something",
+    "variations": [
+      "measurement",
+      "measurements",
+      "measure"
+    ],
+    "emoji": "📏⚖️"
+  },
+  "medical doctor": {
+    "word": "medical doctor",
+    "definition": "a trained person who diagnoses and treats sick people",
+    "variations": [
+      "medical doctor",
+      "medical doctors",
+      "doctor",
+      "doctors"
+    ],
+    "emoji": "🩺👨‍⚕️"
+  },
+  "medicine": {
+    "word": "medicine",
+    "definition": "the science or practice of treating illness and keeping people healthy",
+    "variations": [
+      "medicine",
+      "medical"
+    ],
+    "emoji": "🩺💊"
+  },
+  "microscope": {
+    "word": "microscope",
+    "definition": "an instrument used to see very small things that cannot be seen with eyes alone",
+    "variations": [
+      "microscope",
+      "microscopes"
+    ],
+    "emoji": "🔬👀"
+  },
+  "minerals": {
+    "word": "minerals",
+    "definition": "nutrients needed in small amounts to keep the body healthy",
+    "variations": [
+      "mineral",
+      "minerals"
+    ],
+    "emoji": "🧂🦴"
+  },
+  "moist": {
+    "word": "moist",
+    "definition": "slightly wet",
+    "variations": [
+      "moist"
+    ],
+    "emoji": "💧🌿"
+  },
+  "movement": {
+    "word": "movement",
+    "definition": "a change in position or direction of the whole body or a part of it",
+    "variations": [
+      "movement",
+      "movements",
+      "move",
+      "moves",
+      "moving"
+    ],
+    "emoji": "🏃🪽"
+  },
+  "mucus": {
+    "word": "mucus",
+    "definition": "a slippery substance that protects parts of the body",
+    "variations": [
+      "mucus"
+    ],
+    "emoji": "💧🛡️"
+  },
+  "muscle": {
+    "word": "muscle",
+    "definition": "a body part that helps move other parts of the body",
+    "variations": [
+      "muscle",
+      "muscles"
+    ],
+    "emoji": "💪"
+  },
+  "navigate": {
+    "word": "navigate",
+    "definition": "to find and follow the correct way to move through a place or game",
+    "variations": [
+      "navigate",
+      "navigating",
+      "navigated"
+    ],
+    "emoji": "🧭➡️"
+  },
+  "network": {
+    "word": "network",
+    "definition": "a system of connected things that work together",
+    "variations": [
+      "network",
+      "networks"
+    ],
+    "emoji": "🌐🔗"
+  },
+  "non-flowering plants": {
+    "word": "non-flowering plants",
+    "definition": "plants that do not produce flowers",
+    "variations": [
+      "non-flowering plant",
+      "non-flowering plants"
+    ],
+    "emoji": "🌲🌿"
+  },
+  "non-living": {
+    "word": "non-living",
+    "definition": "not alive; does not grow, breathe, or reproduce",
+    "variations": [
+      "non-living"
+    ],
+    "emoji": "🪨"
+  },
+  "non-living things": {
+    "word": "non-living things",
+    "definition": "things that do not have life",
+    "variations": [
+      "non-living thing",
+      "non-living things"
+    ],
+    "emoji": "🪨🚗"
+  },
+  "nose": {
+    "word": "nose",
+    "definition": "the part of the face used for smelling and for breathing air in and out",
+    "variations": [
+      "nose",
+      "noses"
+    ],
+    "emoji": "👃🌬️"
+  },
+  "nostrils": {
+    "word": "nostrils",
+    "definition": "the two holes in the nose through which air moves in and out",
+    "variations": [
+      "nostril",
+      "nostrils"
+    ],
+    "emoji": "👃"
+  },
+  "nutrients": {
+    "word": "nutrients",
+    "definition": "useful substances in food that help living things grow, get energy, and stay healthy",
+    "variations": [
+      "nutrient",
+      "nutrients"
+    ],
+    "emoji": "🥕💪"
+  },
+  "nutrition": {
+    "word": "nutrition",
+    "definition": "the process by which living things get and use food for energy, growth, and health",
+    "variations": [
+      "nutrition",
+      "nutritional"
+    ],
+    "emoji": "🍎🥗"
+  },
+  "observation": {
+    "word": "observation",
+    "definition": "watching carefully to notice and learn about something",
+    "variations": [
+      "observation",
+      "observations",
+      "observe"
+    ],
+    "emoji": "👀🔎"
+  },
+  "observe": {
+    "word": "observe",
+    "definition": "to look at something carefully in order to notice details",
+    "variations": [
+      "observe",
+      "observes",
+      "observed",
+      "observing"
+    ],
+    "emoji": "👀🔍"
+  },
+  "obstacle": {
+    "word": "obstacle",
+    "definition": "something that blocks your way or makes progress harder",
+    "variations": [
+      "obstacle",
+      "obstacles"
+    ],
+    "emoji": "🪨⛔"
+  },
+  "optician": {
+    "word": "optician",
+    "definition": "a person trained to check eyes and help with glasses",
+    "variations": [
+      "optician",
+      "opticians"
+    ],
+    "emoji": "👓👁️"
+  },
+  "organ": {
+    "word": "organ",
+    "definition": "a part of the body that does a special job",
+    "variations": [
+      "organ",
+      "organs"
+    ],
+    "emoji": "🧠🫁👂"
+  },
+  "organism": {
+    "word": "organism",
+    "definition": "a living thing such as a plant or an animal",
+    "variations": [
+      "organism",
+      "organisms"
+    ],
+    "emoji": "🦋🌱"
+  },
+  "oxygen": {
+    "word": "oxygen",
+    "definition": "a gas that living things need for breathing and living",
+    "variations": [
+      "oxygen"
+    ],
+    "emoji": "💨🫁"
+  },
+  "palette": {
+    "word": "palette",
+    "definition": "a set of colours to choose from when drawing or painting",
+    "variations": [
+      "palette",
+      "palettes"
+    ],
+    "emoji": "🎨🌈"
+  },
+  "parameter": {
+    "word": "parameter",
+    "definition": "a thing that can be measured or used to describe something",
+    "variations": [
+      "parameter",
+      "parameters"
+    ],
+    "emoji": "📐"
+  },
+  "pathogen": {
+    "word": "pathogen",
+    "definition": "a tiny living thing that can cause disease",
+    "variations": [
+      "pathogen",
+      "pathogens"
+    ],
+    "emoji": "🦠⚠️"
+  },
+  "peg": {
+    "word": "peg",
+    "definition": "a small post used for holding or placing things in a game like Tower of Hanoi",
+    "variations": [
+      "peg",
+      "pegs"
+    ],
+    "emoji": "📍🪵"
+  },
+  "petals": {
+    "word": "petals",
+    "definition": "the colored parts of a flower",
+    "variations": [
+      "petal",
+      "petals"
+    ],
+    "emoji": "🌸🌺"
+  },
+  "pharmacist": {
+    "word": "pharmacist",
+    "definition": "a person trained to prepare, dispense, and manage drugs",
+    "variations": [
+      "pharmacist",
+      "pharmacists"
+    ],
+    "emoji": "💊👩‍⚕️"
+  },
+  "pharmacy": {
+    "word": "pharmacy",
+    "definition": "the science and work of preparing and giving medicines",
+    "variations": [
+      "pharmacy",
+      "pharmacies",
+      "pharmacist",
+      "pharmacists"
+    ],
+    "emoji": "💊⚕️"
+  },
+  "phenomena": {
+    "word": "phenomena",
+    "definition": "things or events that happen in nature and can be observed",
+    "variations": [
+      "phenomenon",
+      "phenomena"
+    ],
+    "emoji": "🌩️🌧️"
+  },
+  "phenomenon": {
+    "word": "phenomenon",
+    "definition": "something that happens in nature and can be observed",
+    "variations": [
+      "phenomenon",
+      "phenomena"
+    ],
+    "emoji": "🌧️👀"
+  },
+  "physics": {
+    "word": "physics",
+    "definition": "the branch of science that studies matter, energy, and how they are related",
+    "variations": [
+      "physics",
+      "physical",
+      "physicist",
+      "physicists"
+    ],
+    "emoji": "⚡🔭📐"
+  },
+  "poisonous": {
+    "word": "poisonous",
+    "definition": "harmful or dangerous to the body if eaten, drunk, or touched",
+    "variations": [
+      "poisonous",
+      "poison"
+    ],
+    "emoji": "☠️⚠️"
+  },
+  "predict": {
+    "word": "predict",
+    "definition": "to say or think what will happen before it happens",
+    "variations": [
+      "predict",
+      "predicts",
+      "predicted",
+      "predicting",
+      "prediction",
+      "predictions"
+    ],
+    "emoji": "🔮🤔"
+  },
+  "pressure": {
+    "word": "pressure",
+    "definition": "a force pushing on something that the skin can feel",
+    "variations": [
+      "pressure",
+      "pressures"
+    ],
+    "emoji": "✋"
+  },
+  "principle": {
+    "word": "principle",
+    "definition": "a basic rule or important idea to follow",
+    "variations": [
+      "principle",
+      "principles"
+    ],
+    "emoji": "📘📏"
+  },
+  "problem": {
+    "word": "problem",
+    "definition": "something difficult that needs a solution",
+    "variations": [
+      "problem",
+      "problems"
+    ],
+    "emoji": "❓🧩"
+  },
+  "problem solving": {
+    "word": "problem solving",
+    "definition": "the skill of finding answers to difficulties or challenges",
+    "variations": [
+      "problem solving",
+      "solve",
+      "solving"
+    ],
+    "emoji": "🧩💭"
+  },
+  "procedure": {
+    "word": "procedure",
+    "definition": "the steps followed to do something in the correct order",
+    "variations": [
+      "procedure",
+      "procedures"
+    ],
+    "emoji": "📋👣"
+  },
+  "program": {
+    "word": "program",
+    "definition": "a set of instructions that a computer follows to perform a particular task or function",
+    "variations": [
+      "program",
+      "programs",
+      "programmed",
+      "programming"
+    ],
+    "emoji": "💻📘"
+  },
+  "property": {
+    "word": "property",
+    "definition": "a quality or feature of something",
+    "variations": [
+      "property",
+      "properties"
+    ],
+    "emoji": "📋🔍"
+  },
+  "proteins": {
+    "word": "proteins",
+    "definition": "nutrients that help the body grow and repair itself",
+    "variations": [
+      "protein",
+      "proteins"
+    ],
+    "emoji": "🍳💪"
+  },
+  "pupil": {
+    "word": "pupil",
+    "definition": "the black round opening in the eye that lets light in",
+    "variations": [
+      "pupil",
+      "pupils"
+    ],
+    "emoji": "👁️⚫"
+  },
+  "rebuild": {
+    "word": "rebuild",
+    "definition": "to build something again",
+    "variations": [
+      "rebuild",
+      "rebuilds",
+      "rebuilt",
+      "rebuilding"
+    ],
+    "emoji": "🏗️🔁"
+  },
+  "receptacle": {
+    "word": "receptacle",
+    "definition": "the part of a flower stalk where the parts of the flower are attached",
+    "variations": [
+      "receptacle",
+      "receptacles"
+    ],
+    "emoji": "🌼🔗"
+  },
+  "reduce": {
+    "word": "reduce",
+    "definition": "to make something smaller or less",
+    "variations": [
+      "reduce",
+      "reduces",
+      "reduced",
+      "reducing"
+    ],
+    "emoji": "📉➖"
+  },
+  "reproduction": {
+    "word": "reproduction",
+    "definition": "the process by which living things produce young ones of their own kind",
+    "variations": [
+      "reproduction",
+      "reproduce",
+      "reproduces",
+      "reproducing"
+    ],
+    "emoji": "🥚🐣"
+  },
+  "reptile": {
+    "word": "reptile",
+    "definition": "a cold-blooded vertebrate with dry skin covered with scales",
+    "variations": [
+      "reptile",
+      "reptiles"
+    ],
+    "emoji": "🦎🐍"
+  },
+  "reptiles": {
+    "word": "reptiles",
+    "definition": "cold-blooded animals with dry scaly skin, such as lizards and snakes",
+    "variations": [
+      "reptile",
+      "reptiles"
+    ],
+    "emoji": "🦎🐍"
+  },
+  "requirement": {
+    "word": "requirement",
+    "definition": "something needed in order to do an activity",
+    "variations": [
+      "requirement",
+      "requirements"
+    ],
+    "emoji": "📋✅"
+  },
+  "research": {
+    "word": "research",
+    "definition": "careful searching for information to learn something new",
+    "variations": [
+      "research",
+      "researches",
+      "researching"
+    ],
+    "emoji": "📚🔎"
+  },
+  "resin": {
+    "word": "resin",
+    "definition": "a sticky substance produced by some plants and trees",
+    "variations": [
+      "resin",
+      "resins"
+    ],
+    "emoji": "🌲🟡"
+  },
+  "resource": {
+    "word": "resource",
+    "definition": "something useful that helps you learn or do work",
+    "variations": [
+      "resource",
+      "resources"
+    ],
+    "emoji": "📚🧰"
+  },
+  "respiration": {
+    "word": "respiration",
+    "definition": "the process in living things of using oxygen to release energy",
+    "variations": [
+      "respiration",
+      "respire",
+      "respiring"
+    ],
+    "emoji": "🫁⚙️"
+  },
+  "results": {
+    "word": "results",
+    "definition": "what is found or happens after an experiment or activity",
+    "variations": [
+      "result",
+      "results"
+    ],
+    "emoji": "📋✅"
+  },
+  "retina": {
+    "word": "retina",
+    "definition": "the part at the back of the eye that receives light and helps form images",
+    "variations": [
+      "retina",
+      "retinas"
+    ],
+    "emoji": "👁️💡"
+  },
+  "root": {
+    "word": "root",
+    "definition": "the part of a plant that grows under the ground and takes in water and minerals",
+    "variations": [
+      "root",
+      "roots"
+    ],
+    "emoji": "🌱🪴"
+  },
+  "roots": {
+    "word": "roots",
+    "definition": "the parts of a plant that grow in the soil and take in water and nutrients",
+    "variations": [
+      "root",
+      "roots"
+    ],
+    "emoji": "🌱⬇️"
+  },
+  "rule": {
+    "word": "rule",
+    "definition": "an instruction that tells what is allowed or not allowed",
+    "variations": [
+      "rule",
+      "rules"
+    ],
+    "emoji": "📏📘"
+  },
+  "salty": {
+    "word": "salty",
+    "definition": "having the taste of salt",
+    "variations": [
+      "salty",
+      "saltier",
+      "saltiest"
+    ],
+    "emoji": "🧂"
+  },
+  "scale": {
+    "word": "scale",
+    "definition": "a small hard plate that covers the skin of some animals like fish and reptiles",
+    "variations": [
+      "scale",
+      "scales"
+    ],
+    "emoji": "🐟🦎"
+  },
+  "scales": {
+    "word": "scales",
+    "definition": "small hard plates that cover the bodies of some animals such as fish and reptiles",
+    "variations": [
+      "scale",
+      "scales"
+    ],
+    "emoji": "🐟🛡️"
+  },
+  "science": {
+    "word": "science",
+    "definition": "the study of the world around us through observing, testing, and learning facts",
+    "variations": [
+      "science",
+      "scientific"
+    ],
+    "emoji": "🔬🌍"
+  },
+  "scientific discovery": {
+    "word": "scientific discovery",
+    "definition": "something new learned or found through science",
+    "variations": [
+      "scientific discovery",
+      "scientific discoveries",
+      "discovery",
+      "discoveries"
+    ],
+    "emoji": "🔍💡"
+  },
+  "scientific investigation": {
+    "word": "scientific investigation",
+    "definition": "a careful way of finding answers to questions using science",
+    "variations": [
+      "scientific investigation",
+      "scientific investigations"
+    ],
+    "emoji": "🔬❓"
+  },
+  "scientific report": {
+    "word": "scientific report",
+    "definition": "a written record that explains an investigation, its steps, and its findings",
+    "variations": [
+      "scientific report",
+      "scientific reports",
+      "report",
+      "reports"
+    ],
+    "emoji": "📘📝"
+  },
+  "scientist": {
+    "word": "scientist",
+    "definition": "a person who studies science and does scientific work",
+    "variations": [
+      "scientist",
+      "scientists"
+    ],
+    "emoji": "👨‍🔬👩‍🔬"
+  },
+  "screen": {
+    "word": "screen",
+    "definition": "the part of a computer, tablet, or phone where you see pictures and information",
+    "variations": [
+      "screen",
+      "screens"
+    ],
+    "emoji": "🖥️📱"
+  },
+  "scutes": {
+    "word": "scutes",
+    "definition": "hard outer scales or plates that cover parts of some animals, such as a bird's legs",
+    "variations": [
+      "scute",
+      "scutes"
+    ],
+    "emoji": "🦵🛡️"
+  },
+  "secrete": {
+    "word": "secrete",
+    "definition": "to make and give out a substance such as milk",
+    "variations": [
+      "secrete",
+      "secretes",
+      "secreted",
+      "secreting"
+    ],
+    "emoji": "💧🥛"
+  },
+  "seed": {
+    "word": "seed",
+    "definition": "the small part of a plant that can grow into a new plant",
+    "variations": [
+      "seed",
+      "seeds"
+    ],
+    "emoji": "🌰🌱"
+  },
+  "seedling": {
+    "word": "seedling",
+    "definition": "a young plant that has just started to grow from a seed",
+    "variations": [
+      "seedling",
+      "seedlings"
+    ],
+    "emoji": "🌱🪴"
+  },
+  "seedlings": {
+    "word": "seedlings",
+    "definition": "young plants that have just started growing from seeds",
+    "variations": [
+      "seedling",
+      "seedlings"
+    ],
+    "emoji": "🌱🪴"
+  },
+  "seeds": {
+    "word": "seeds",
+    "definition": "small parts of plants that can grow into new plants",
+    "variations": [
+      "seed",
+      "seeds"
+    ],
+    "emoji": "🌰🌱"
+  },
+  "sense organ": {
+    "word": "sense organ",
+    "definition": "a body part that helps us detect things around us, such as seeing, hearing, smelling, tasting, and feeling",
+    "variations": [
+      "sense organ",
+      "sense organs"
+    ],
+    "emoji": "👂👃👁️"
+  },
+  "sense organs": {
+    "word": "sense organs",
+    "definition": "body parts such as the eyes, ears, nose, tongue, and skin that detect stimuli",
+    "variations": [
+      "sense organ",
+      "sense organs"
+    ],
+    "emoji": "👀👂👃"
+  },
+  "sensitivity": {
+    "word": "sensitivity",
+    "definition": "the ability to notice and respond to changes in the environment",
+    "variations": [
+      "sensitivity",
+      "sensitive"
+    ],
+    "emoji": "👂✨"
+  },
+  "sepals": {
+    "word": "sepals",
+    "definition": "the outer parts of a flower that protect the flower bud",
+    "variations": [
+      "sepal",
+      "sepals"
+    ],
+    "emoji": "🌸🛡️"
+  },
+  "skill": {
+    "word": "skill",
+    "definition": "the ability to do something well",
+    "variations": [
+      "skill",
+      "skills"
+    ],
+    "emoji": "🛠️👏"
+  },
+  "skin": {
+    "word": "skin",
+    "definition": "the outer covering of the body that helps us feel touch, heat, cold, and pain",
+    "variations": [
+      "skin",
+      "skins"
+    ],
+    "emoji": "🖐️🙂"
+  },
+  "smell": {
+    "word": "smell",
+    "definition": "to notice or detect a scent using the nose",
+    "variations": [
+      "smell",
+      "smells",
+      "smelling"
+    ],
+    "emoji": "👃🌸"
+  },
+  "software": {
+    "word": "software",
+    "definition": "the programs and instructions that make a computer or device work",
+    "variations": [
+      "software"
+    ],
+    "emoji": "💻⚙️"
+  },
+  "soil": {
+    "word": "soil",
+    "definition": "the top layer of earth in which plants grow",
+    "variations": [
+      "soil",
+      "soils"
+    ],
+    "emoji": "🌱🟤"
+  },
+  "solar energy": {
+    "word": "solar energy",
+    "definition": "energy that comes from the sun",
+    "variations": [
+      "solar energy"
+    ],
+    "emoji": "☀️🔋"
+  },
+  "solar panel": {
+    "word": "solar panel",
+    "definition": "a device that changes sunlight into usable energy",
+    "variations": [
+      "solar panel",
+      "solar panels"
+    ],
+    "emoji": "☀️🔲"
+  },
+  "solid": {
+    "word": "solid",
+    "definition": "a state of matter with a fixed shape and fixed size",
+    "variations": [
+      "solid",
+      "solids"
+    ],
+    "emoji": "🪨🧱"
+  },
+  "sound waves": {
+    "word": "sound waves",
+    "definition": "movements in the air that carry sound to our ears",
+    "variations": [
+      "sound wave",
+      "sound waves"
+    ],
+    "emoji": "🔊〰️"
+  },
+  "sour": {
+    "word": "sour",
+    "definition": "having a sharp taste like lemon",
+    "variations": [
+      "sour",
+      "sourer",
+      "sourest"
+    ],
+    "emoji": "🍋😖"
+  },
+  "spinal cord": {
+    "word": "spinal cord",
+    "definition": "the long group of nerves inside the backbone that carries messages in the body",
+    "variations": [
+      "spinal cord",
+      "spinal cords"
+    ],
+    "emoji": "🦴⚡"
+  },
+  "stage": {
+    "word": "stage",
+    "definition": "a step or part of a process or game",
+    "variations": [
+      "stage",
+      "stages"
+    ],
+    "emoji": "🪜📍"
+  },
+  "state of matter": {
+    "word": "state of matter",
+    "definition": "the form matter takes, such as solid, liquid, or gas",
+    "variations": [
+      "state of matter",
+      "states of matter"
+    ],
+    "emoji": "🧊💧💨"
+  },
+  "stem": {
+    "word": "stem",
+    "definition": "the main part of a plant that supports leaves, flowers, and fruits",
+    "variations": [
+      "stem",
+      "stems"
+    ],
+    "emoji": "🌿🪴"
+  },
+  "stimuli": {
+    "word": "stimuli",
+    "definition": "changes or signals in the environment that sense organs detect",
+    "variations": [
+      "stimulus",
+      "stimuli"
+    ],
+    "emoji": "👀👂⚡"
+  },
+  "stimulus": {
+    "word": "stimulus",
+    "definition": "something that causes a living thing to react or respond",
+    "variations": [
+      "stimulus",
+      "stimuli"
+    ],
+    "emoji": "⚡👀"
+  },
+  "stomata": {
+    "word": "stomata",
+    "definition": "tiny openings on leaves that let gases and water pass in and out",
+    "variations": [
+      "stoma",
+      "stomata"
+    ],
+    "emoji": "🍃🫧"
+  },
+  "streamline": {
+    "word": "streamline",
+    "definition": "a body shape that is smooth and narrow, helping movement through air or water",
+    "variations": [
+      "streamline",
+      "streamlined",
+      "streamlining"
+    ],
+    "emoji": "🐦🌬️"
+  },
+  "streamlined": {
+    "word": "streamlined",
+    "definition": "having a smooth shape that helps something move easily through air or water",
+    "variations": [
+      "streamline",
+      "streamlined",
+      "streamlining"
+    ],
+    "emoji": "🕊️💨"
+  },
+  "stylus": {
+    "word": "stylus",
+    "definition": "a pen-shaped tool used to touch, write, or draw on a screen",
+    "variations": [
+      "stylus",
+      "styli",
+      "styluses"
+    ],
+    "emoji": "🖊️📱"
+  },
+  "substance": {
+    "word": "substance",
+    "definition": "a type of material or matter",
+    "variations": [
+      "substance",
+      "substances"
+    ],
+    "emoji": "🧪📦"
+  },
+  "suckling": {
+    "word": "suckling",
+    "definition": "feeding a baby animal with milk from its mother",
+    "variations": [
+      "suckle",
+      "suckles",
+      "suckling",
+      "suckled"
+    ],
+    "emoji": "🍼🐮"
+  },
+  "sunlight": {
+    "word": "sunlight",
+    "definition": "light that comes from the sun",
+    "variations": [
+      "sunlight"
+    ],
+    "emoji": "☀️🌞"
+  },
+  "survive": {
+    "word": "survive",
+    "definition": "to stay alive",
+    "variations": [
+      "survive",
+      "survives",
+      "survived",
+      "surviving",
+      "survival"
+    ],
+    "emoji": "🌱💚"
+  },
+  "sweat": {
+    "word": "sweat",
+    "definition": "liquid that comes out through the skin",
+    "variations": [
+      "sweat",
+      "sweats",
+      "sweating"
+    ],
+    "emoji": "💦😓"
+  },
+  "sweat glands": {
+    "word": "sweat glands",
+    "definition": "small parts in the skin that produce sweat",
+    "variations": [
+      "sweat gland",
+      "sweat glands"
+    ],
+    "emoji": "💧 त्व"
+  },
+  "sweet": {
+    "word": "sweet",
+    "definition": "having a sugary taste like sugar or ripe fruit",
+    "variations": [
+      "sweet",
+      "sweeter",
+      "sweetest",
+      "sweets"
+    ],
+    "emoji": "🍭🍬"
+  },
+  "swipe": {
+    "word": "swipe",
+    "definition": "to move your finger across a screen to control something",
+    "variations": [
+      "swipe",
+      "swipes",
+      "swiping",
+      "swiped"
+    ],
+    "emoji": "👆➡️"
+  },
+  "syllabus": {
+    "word": "syllabus",
+    "definition": "a plan that shows what learners will study in a subject",
+    "variations": [
+      "syllabus",
+      "syllabuses"
+    ],
+    "emoji": "📘"
+  },
+  "tablet": {
+    "word": "tablet",
+    "definition": "a flat portable computer with a touch screen",
+    "variations": [
+      "tablet",
+      "tablets"
+    ],
+    "emoji": "📱🖐️"
+  },
+  "taste bud": {
+    "word": "taste bud",
+    "definition": "a small part on the tongue that helps detect taste",
+    "variations": [
+      "taste bud",
+      "taste buds"
+    ],
+    "emoji": "👅🤏"
+  },
+  "taste buds": {
+    "word": "taste buds",
+    "definition": "small special parts on the tongue that help us know different tastes of food and drink",
+    "variations": [
+      "taste bud",
+      "taste buds"
+    ],
+    "emoji": "👅🍬"
+  },
+  "teaching": {
+    "word": "teaching",
+    "definition": "the work of helping others learn",
+    "variations": [
+      "teaching",
+      "teach",
+      "teacher",
+      "teachers"
+    ],
+    "emoji": "📚🧑‍🏫"
+  },
+  "temperature": {
+    "word": "temperature",
+    "definition": "how hot or cold something is",
+    "variations": [
+      "temperature",
+      "temperatures"
+    ],
+    "emoji": "🌡️"
+  },
+  "texture": {
+    "word": "texture",
+    "definition": "how the surface of something feels, for example rough, smooth, soft, or hard",
+    "variations": [
+      "texture",
+      "textures"
+    ],
+    "emoji": "✋🧵"
+  },
+  "thunderstorm": {
+    "word": "thunderstorm",
+    "definition": "a storm with thunder, lightning, and usually rain",
+    "variations": [
+      "thunderstorm",
+      "thunderstorms"
+    ],
+    "emoji": "⛈️⚡"
+  },
+  "tongue": {
+    "word": "tongue",
+    "definition": "the soft part inside the mouth that helps us taste food and also helps in speaking and swallowing",
+    "variations": [
+      "tongue",
+      "tongues"
+    ],
+    "emoji": "👅😋"
+  },
+  "tool": {
+    "word": "tool",
+    "definition": "an object used to help do work",
+    "variations": [
+      "tool",
+      "tools"
+    ],
+    "emoji": "🛠️"
+  },
+  "umami": {
+    "word": "umami",
+    "definition": "a savory taste found in foods like meat, milk, and fish",
+    "variations": [
+      "umami"
+    ],
+    "emoji": "🍖🥛🐟"
+  },
+  "urine": {
+    "word": "urine",
+    "definition": "liquid waste that leaves the body",
+    "variations": [
+      "urine"
+    ],
+    "emoji": "💧🚽"
+  },
+  "vapour": {
+    "word": "vapour",
+    "definition": "a gas that comes from a liquid, such as water in the air",
+    "variations": [
+      "vapour",
+      "vapours",
+      "vapor",
+      "vapors"
+    ],
+    "emoji": "💨💧"
+  },
+  "vertebral column": {
+    "word": "vertebral column",
+    "definition": "the line of joined bones in the back; the backbone",
+    "variations": [
+      "vertebral column",
+      "vertebral columns"
+    ],
+    "emoji": "🦴🔗"
+  },
+  "vertebrate": {
+    "word": "vertebrate",
+    "definition": "an animal that has a backbone",
+    "variations": [
+      "vertebrate",
+      "vertebrates"
+    ],
+    "emoji": "🐟🦴"
+  },
+  "vertebrates": {
+    "word": "vertebrates",
+    "definition": "animals that have a backbone",
+    "variations": [
+      "vertebrate",
+      "vertebrates"
+    ],
+    "emoji": "🦴🐾"
+  },
+  "veterinarian": {
+    "word": "veterinarian",
+    "definition": "a trained person who diagnoses and treats sick animals",
+    "variations": [
+      "veterinarian",
+      "veterinarians",
+      "vet",
+      "vets"
+    ],
+    "emoji": "🐶🩺"
+  },
+  "veterinary medicine": {
+    "word": "veterinary medicine",
+    "definition": "the science and practice of treating animal diseases",
+    "variations": [
+      "veterinary medicine",
+      "veterinary",
+      "veterinarian",
+      "veterinarians"
+    ],
+    "emoji": "🐄🩺"
+  },
+  "vibrations": {
+    "word": "vibrations",
+    "definition": "quick small movements that can be felt or heard",
+    "variations": [
+      "vibration",
+      "vibrations"
+    ],
+    "emoji": "〰️🔊"
+  },
+  "vision": {
+    "word": "vision",
+    "definition": "the ability to see",
+    "variations": [
+      "vision"
+    ],
+    "emoji": "👀✨"
+  },
+  "vitamins": {
+    "word": "vitamins",
+    "definition": "nutrients that help the body work properly and stay healthy",
+    "variations": [
+      "vitamin",
+      "vitamins"
+    ],
+    "emoji": "🍊💊"
+  },
+  "warm-blooded": {
+    "word": "warm-blooded",
+    "definition": "able to keep the body temperature nearly the same even when the environment changes",
+    "variations": [
+      "warm-blooded"
+    ],
+    "emoji": "🌡️🩸"
+  },
+  "waste": {
+    "word": "waste",
+    "definition": "unwanted material that the body or a living thing gets rid of",
+    "variations": [
+      "waste",
+      "wastes"
+    ],
+    "emoji": "🗑️💧"
+  },
+  "wild": {
+    "word": "wild",
+    "definition": "living in nature and not kept by people",
+    "variations": [
+      "wild"
+    ],
+    "emoji": "🌳🦅"
+  }
+}
