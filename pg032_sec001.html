@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Science Pupil's Book Standard Three</title>
     <meta name="title-id" content="pg032_sec001" />
-    <meta name="page-section-id" content="50" />
+    <meta name="page-section-id" content="43" />
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
@@ -39,28 +39,44 @@
         <span data-id="pg032_n0018">The skin receives signals and sends information to the brain for interpretation.</span>
       </p>
 
-      <div class="mt-6 flex justify-center gap-4 max-lg:gap-3 max-sm:flex-col max-sm:items-center max-sm:gap-3">
-        <div class="relative w-[420px] max-w-full shrink-0 max-lg:w-[390px] max-sm:w-full max-sm:max-w-[320px]">
-          <img data-id="pg032_im001" src="images/pg032_im001.jpg" alt="Cross-section of the skin showing a hair growing from a follicle through the upper, middle, and inner layers of the skin." class="block max-w-full object-contain" style="max-width: 100%; height: auto;">
-          <div class="pointer-events-none absolute left-[10%] top-[15%] h-px w-[14%] bg-neutral-700 max-sm:left-[10%] max-sm:top-[14%]"></div>
-          <div class="absolute left-[28%] top-[11.5%] z-10 text-[0.9rem] text-neutral-800 max-lg:text-[0.86rem] max-sm:left-[27%] max-sm:top-[10.5%] max-sm:text-[0.84rem]"><span data-id="pg032_n0020">Hair</span></div>
-        </div>
+      <!-- Diagram Section -->
+      <div class="mt-6 flex justify-center">
+        <div class="relative w-full max-w-[580px]">
+          <div class="relative w-full">
+            <img data-id="pg032_im001" src="images/pg032_im001.jpg" alt="Cross-section of the skin showing a hair growing from a follicle through the upper, middle, and inner layers of the skin." class="block w-full object-contain" style="max-width: 100%; height: auto;">
 
-        <div class="relative w-[170px] shrink-0 pb-8 text-[0.9rem] text-neutral-800 max-lg:w-[145px] max-lg:text-[0.86rem] max-sm:w-full max-sm:max-w-[320px] max-sm:pb-0 max-sm:text-[0.86rem]">
-          <div class="absolute left-0 top-[16%] h-[20%] w-7 rounded-r-full border-y-2 border-r-2 border-neutral-700 border-l-0 max-sm:hidden"></div>
-          <div class="absolute left-0 top-[48%] h-[28%] w-7 rounded-r-full border-y-2 border-r-2 border-neutral-700 border-l-0 max-sm:hidden"></div>
-          <div class="absolute left-0 top-[81%] h-[11%] w-7 rounded-r-full border-y-2 border-r-2 border-neutral-700 border-l-0 max-sm:hidden"></div>
+            <!-- SVG overlay for pointer line and curly brackets -->
+            <svg class="pointer-events-none absolute inset-0 h-full w-full stroke-neutral-800 fill-none" viewBox="0 0 580 360" preserveAspectRatio="none">
+              <!-- Hair pointer line -->
+              <line x1="85" y1="42" x2="135" y2="42" stroke-width="1.5"/>
 
-          <div class="flex min-h-[300px] flex-col justify-between pl-11 max-lg:min-h-[280px] max-lg:pl-9 max-sm:hidden">
-            <div class="pt-2"><span data-id="pg032_n0021">Upper layer</span></div>
-            <div><span data-id="pg032_n0022">Middle layer</span></div>
-            <div class="pb-1"><span data-id="pg032_n0023">Inner layer</span></div>
-          </div>
+              <!-- Curly Bracket: Upper layer -->
+              <path d="M 378,96 Q 386,96 386,106 L 386,122 Q 386,132 394,132 Q 386,132 386,142 L 386,158 Q 386,168 378,168" stroke-width="1.5"/>
 
-          <div class="hidden max-sm:flex max-sm:w-full max-sm:flex-col max-sm:items-start max-sm:gap-1 max-sm:pt-1">
-            <div><span data-id="pg032_n0021">Upper layer</span></div>
-            <div><span data-id="pg032_n0022">Middle layer</span></div>
-            <div><span data-id="pg032_n0023">Inner layer</span></div>
+              <!-- Curly Bracket: Middle layer -->
+              <path d="M 378,172 Q 386,172 386,182 L 386,222 Q 386,232 394,232 Q 386,232 386,242 L 386,282 Q 386,292 378,292" stroke-width="1.5"/>
+
+              <!-- Curly Bracket: Inner layer -->
+              <path d="M 378,296 Q 386,296 386,303 L 386,311 Q 386,318 394,318 Q 386,318 386,325 L 386,333 Q 386,340 378,340" stroke-width="1.5"/>
+            </svg>
+
+            <!-- Hair Label -->
+            <div class="absolute left-[24%] top-[8.5%] z-10 text-[1.1rem] text-neutral-800 max-lg:text-[0.95rem] max-sm:text-[0.75rem]">
+              <span data-id="pg032_n0020">Hair</span>
+            </div>
+
+            <!-- Layer Labels -->
+            <div class="absolute left-[70%] top-[36.5%] z-10 -translate-y-1/2 text-[1.1rem] text-neutral-800 max-lg:text-[0.95rem] max-sm:text-[0.75rem]">
+              <span data-id="pg032_n0021">Upper layer</span>
+            </div>
+
+            <div class="absolute left-[70%] top-[64.5%] z-10 -translate-y-1/2 text-[1.1rem] text-neutral-800 max-lg:text-[0.95rem] max-sm:text-[0.75rem]">
+              <span data-id="pg032_n0022">Middle layer</span>
+            </div>
+
+            <div class="absolute left-[70%] top-[88.5%] z-10 -translate-y-1/2 text-[1.1rem] text-neutral-800 max-lg:text-[0.95rem] max-sm:text-[0.75rem]">
+              <span data-id="pg032_n0023">Inner layer</span>
+            </div>
           </div>
         </div>
       </div>
