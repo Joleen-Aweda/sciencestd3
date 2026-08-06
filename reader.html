@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Read Science Pupil's Book Standard Three</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eaf6fb; color: #18323d; }
+    header { min-height: 64px; padding: 12px 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; background: #087ea4; color: white; }
+    h1 { margin: 0; font-size: clamp(1rem, 2.5vw, 1.35rem); }
+    .controls { display: flex; align-items: center; gap: 8px; }
+    button { min-height: 40px; border: 2px solid white; border-radius: 10px; padding: 7px 14px; background: white; color: #075e7c; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    #status { min-width: 8rem; text-align: center; font-weight: 700; }
+    iframe { display: block; width: 100%; height: calc(100vh - 64px); border: 0; background: white; }
+    @media (max-width: 640px) { header { align-items: stretch; flex-direction: column; } .controls { justify-content: center; } iframe { height: calc(100vh - 120px); } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Science Pupil's Book Standard Three</h1>
+    <nav class="controls" aria-label="Book navigation">
+      <button id="previous" type="button" aria-label="Previous page">Previous</button>
+      <span id="status" aria-live="polite">Loading…</span>
+      <button id="next" type="button" aria-label="Next page">Next</button>
+    </nav>
+  </header>
+  <iframe id="book" title="Science Pupil's Book Standard Three"></iframe>
+  <script>
+    const frame = document.querySelector('#book');
+    const previous = document.querySelector('#previous');
+    const next = document.querySelector('#next');
+    const status = document.querySelector('#status');
+    let pages = [], position = 0;
+    function showPage() {
+      if (!pages.length) return;
+      frame.src = pages[position].href;
+      status.textContent = `Page ${position + 1} of ${pages.length}`;
+      previous.disabled = position === 0;
+      next.disabled = position === pages.length - 1;
+    }
+    previous.addEventListener('click', () => { if (position > 0) { position--; showPage(); } });
+    next.addEventListener('click', () => { if (position + 1 < pages.length) { position++; showPage(); } });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') previous.click();
+      if (event.key === 'ArrowRight') next.click();
+    });
+    fetch('content/pages.json')
+      .then(response => { if (!response.ok) throw new Error('Unable to load pages'); return response.json(); })
+      .then(data => { pages = data; showPage(); })
+      .catch(() => { status.textContent = 'Start a local web server to read the book'; });
+  </script>
+</body>
+</html>
