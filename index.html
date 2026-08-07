@@ -1,97 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Science Pupil's Book Standard Three</title>
-    <meta name="title-id" content="pg001_sec001" />
-    <meta name="page-section-id" content="1" />
-    <link href="./content/tailwind_output.css" rel="stylesheet">
-    <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="./assets/fonts.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Science Pupil's Book Standard Three — complete accessible textbook">
+  <title>Science Pupil's Book Standard Three</title>
+  <link href="./content/tailwind_output.css" rel="stylesheet">
+  <link href="./assets/fonts.css" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; --blue: #087ea4; --ink: #17313b; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #eaf6fb; color: var(--ink); }
+    .site-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; background: var(--blue); color: white; box-shadow: 0 2px 10px #073c5033; }
+    .site-header h1 { margin: 0; font: 700 clamp(1rem, 2.5vw, 1.35rem)/1.2 Arial, sans-serif; }
+    .jump { display: flex; align-items: center; gap: .5rem; }
+    .jump label { font-weight: 700; }
+    .jump input, .jump button { min-height: 40px; border-radius: 9px; font: inherit; }
+    .jump input { width: 5.5rem; border: 2px solid #bce0ec; padding: .4rem; text-align: center; }
+    .jump button { border: 2px solid white; padding: .4rem .8rem; background: white; color: #075e7c; font-weight: 700; cursor: pointer; }
+    #status { min-width: 8rem; font-weight: 700; text-align: right; }
+    #textbook { width: min(1180px, 100%); margin: 0 auto; padding: 1.25rem; }
+    .textbook-page { position: relative; margin: 0 0 2rem; overflow: hidden; border: 1px solid #c9e3ec; border-radius: 16px; background: white; box-shadow: 0 8px 24px #0b526414; }
+    .page-marker { position: sticky; top: 66px; z-index: 20; display: inline-block; margin: .7rem 0 0 .7rem; border-radius: 999px; padding: .35rem .7rem; background: #075e7c; color: white; font: 700 .9rem/1 Arial, sans-serif; }
+    .page-content { overflow: hidden; }
+    .page-content > * { opacity: 1 !important; }
+    .load-error { margin: 1rem; padding: 1rem; border-left: 5px solid #b42318; background: #fff3f1; color: #7a1712; }
+    .loading { padding: 4rem 1rem; text-align: center; font-size: 1.1rem; }
+    .skip-link { position: absolute; left: -9999px; top: .5rem; z-index: 200; background: white; color: #075e7c; padding: .6rem; }
+    .skip-link:focus { left: .5rem; }
+    @media (max-width: 700px) {
+      .site-header { position: static; align-items: stretch; flex-direction: column; }
+      .jump { flex-wrap: wrap; }
+      #status { text-align: left; }
+      #textbook { padding: .5rem; }
+      .textbook-page { border-radius: 8px; }
+      .page-marker { position: static; }
+    }
+  </style>
 </head>
-
-<body class="min-h-screen flex items-center justify-center">
-    <main class="w-full">
-      <div id="content" class="container mx-auto bg-white px-8 py-10 max-lg:px-6 max-sm:px-4 opacity-0">
-  <section data-section-type="front_cover" data-section-id="pg001_sec001" class="relative min-h-[1500px] overflow-hidden bg-white font-sans text-left text-sky-600 max-lg:min-h-[1280px] max-sm:min-h-[1180px]">
-    <div class="absolute left-0 top-8 h-px w-8 bg-gray-400"></div>
-    <div class="absolute right-0 top-8 h-px w-8 bg-gray-400"></div>
-    <div class="absolute bottom-10 left-0 h-px w-10 bg-gray-400"></div>
-    <div class="absolute bottom-10 right-0 h-px w-10 bg-gray-400"></div>
-
-    <div class="relative z-10 mx-auto flex max-w-4xl flex-col items-center pt-24 max-lg:pt-16 max-sm:pt-12">
-      <h1 data-id="pg001_n0002" class="text-[86px] leading-none font-black italic tracking-wide text-sky-500 max-lg:text-[64px] max-sm:text-[42px]">Science</h1>
-
-      <h2 data-id="pg001_n0004" class="mt-14 text-[48px] leading-tight font-bold italic tracking-wide text-sky-500 max-lg:mt-10 max-lg:text-[38px] max-sm:mt-8 max-sm:text-[28px]">Pupil&#x2019;s Book</h2>
-
-      <div class="mt-10 flex w-[520px] items-center justify-center text-sky-500 max-lg:w-[430px] max-sm:w-[260px]">
-        <div class="h-[2px] flex-1 bg-sky-400"></div>
-        <div class="mx-4 h-4 w-4 rounded-full border-2 border-sky-400 max-sm:mx-2 max-sm:h-3 max-sm:w-3"></div>
-        <div class="h-[2px] flex-1 bg-sky-400"></div>
-      </div>
-
-      <h2 data-id="pg001_n0006" class="mt-8 text-[46px] leading-tight font-bold italic tracking-wide text-sky-500 max-lg:text-[36px] max-sm:text-[27px]">Standard Three</h2>
-
-      <div class="relative mt-8 h-[820px] w-[560px] rounded-sm border border-green-200 bg-gradient-to-br from-green-100 via-lime-100 to-green-200 p-5 shadow-[0_8px_20px_rgba(0,0,0,0.08)] max-lg:h-[620px] max-lg:w-[470px] max-sm:h-[700px] max-sm:w-full max-sm:max-w-[340px] max-sm:p-3 overflow-hidden">
-        <div class="absolute inset-3 border-2 border-green-300/70"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.42),rgba(163,230,53,0.18)_40%,rgba(132,204,22,0.10)_68%,transparent_100%)]"></div>
-        <div class="absolute inset-0 opacity-20 [background-image:repeating-linear-gradient(60deg,rgba(101,163,13,0.32)_0,rgba(101,163,13,0.32)_2px,transparent_2px,transparent_13px)]"></div>
-        <div class="absolute left-1/2 top-[50px] h-[86%] w-6 origin-top -translate-x-[120px] rotate-[35deg] rounded-full bg-lime-500/25 max-lg:w-5 max-lg:-translate-x-[92px] max-sm:w-4 max-sm:-translate-x-[64px]"></div>
-        <div class="absolute left-1/2 top-[50px] h-[86%] w-6 origin-top translate-x-[120px] -rotate-[35deg] rounded-full bg-lime-500/25 max-lg:w-5 max-lg:translate-x-[92px] max-sm:w-4 max-sm:translate-x-[64px]"></div>
-
-        <div class="relative z-10 flex h-full flex-col px-8 py-8 text-green-800 max-lg:px-6 max-lg:py-6 max-sm:px-4 max-sm:py-5">
-          <div class="text-center text-[20px] font-bold uppercase leading-relaxed tracking-tight max-lg:text-[15px] max-sm:text-[10px]">
-            <div data-id="pg001_n0009">THE UNITED REPUBLIC OF TANZANIA</div>
-            <div data-id="pg001_n0010">MINISTRY OF EDUCATION,</div>
-            <div data-id="pg001_n0011">SCIENCE AND TECHNOLOGY</div>
-          </div>
-
-          <div data-id="pg001_n0012" class="mt-12 text-center font-serif text-[28px] italic text-red-500 [text-shadow:1px_1px_0_white,-1px_-1px_0_white] max-lg:mt-8 max-lg:text-[22px] max-sm:mt-6 max-sm:text-[16px]">Certificate of Approval</div>
-
-          <div class="mt-5 space-y-3 text-[16px] leading-relaxed text-green-900 max-lg:text-[12px] max-sm:text-[9px] max-sm:space-y-2">
-            <div data-id="pg001_n0014" class="text-right pr-6 max-sm:pr-2">No. 1216</div>
-            <div data-id="pg001_n0015">Title of Publication: Science Pupil&#x2019;s Book Standard Three</div>
-            <div data-id="pg001_n0016">Publisher: Tanzania Institute of Education</div>
-            <div data-id="pg001_n0017">Author: Tanzania Institute of Education</div>
-            <div data-id="pg001_n0018">ISBN: 978-9987-09-954-2</div>
-          </div>
-
-          <p class="mt-10 text-[16px] leading-[1.8] text-green-900 max-lg:mt-8 max-lg:text-[12px] max-sm:mt-7 max-sm:text-[9px] max-sm:leading-[1.7]">
-            <span data-id="pg001_n0020">This book was approved by the Ministry of Education, Science and Technology on 1st November, 2023 as a Textbook for Standard Three in Primary Schools in Tanzania as per 2023 Syllabus.</span>
-          </p>
-
-          <div class="mt-auto pt-8 max-sm:pt-6">
-            <!-- Signature SVG -->
-            <div class="mb-1 h-12 w-48 max-sm:h-8 max-sm:w-32">
-              <svg viewBox="0 0 160 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-full">
-                <path d="M 20 30 C 10 15, 25 5, 30 25 C 33 35, 20 40, 15 35 C 10 30, 20 20, 45 25 C 55 27, 50 35, 60 22 C 65 15, 75 35, 80 20 C 85 10, 95 35, 100 25 C 105 15, 115 30, 125 15 C 120 30, 130 35, 145 25" stroke="#1d3557" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 28 32 C 45 28, 70 32, 105 28" stroke="#1d3557" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div data-id="pg001_n0022" class="text-[16px] font-semibold text-green-900 max-lg:text-[12px] max-sm:text-[9px]">Dr Lyabwene M. Mtahabwa</div>
-            <div data-id="pg001_n0023" class="mt-1 text-[16px] text-green-900 max-lg:text-[12px] max-sm:text-[9px]">Commissioner for Education</div>
-          </div>
-        </div>
-      </div>
-
-      <div data-id="pg001_n0026" class="mt-8 text-center text-[40px] leading-tight font-black italic tracking-wide text-sky-500 max-lg:mt-6 max-lg:text-[34px] max-sm:mt-6 max-sm:text-[22px]">Tanzania Institute of Education</div>
+<body>
+  <a class="skip-link" href="#textbook">Skip to textbook</a>
+  <header class="site-header">
+    <h1>Science Pupil's Book Standard Three</h1>
+    <div class="jump" aria-label="Jump to a textbook page">
+      <label for="page-number">Page</label>
+      <input id="page-number" type="number" min="1" value="1" inputmode="numeric">
+      <button id="go" type="button">Go</button>
+      <span id="status" aria-live="polite">Loading pages…</span>
     </div>
+  </header>
+  <main id="textbook">
+    <p class="loading" id="loading">Loading the complete textbook in consecutive order…</p>
+  </main>
+  <noscript><p class="loading">JavaScript is required to assemble the textbook. Use the <a href="changes.html">complete page directory</a> instead.</p></noscript>
+  <script>
+    const textbook = document.querySelector('#textbook');
+    const loading = document.querySelector('#loading');
+    const status = document.querySelector('#status');
+    const pageNumber = document.querySelector('#page-number');
+    const go = document.querySelector('#go');
+    let totalPages = 0;
 
-    <div class="absolute bottom-2 left-0 right-0 flex items-end justify-between px-14 text-[12px] text-black max-lg:px-8 max-sm:px-4 max-sm:text-[10px]">
-      
-      
-    </div>
-  </section>
-</div>
-    </main>
+    function jumpToPage() {
+      const requested = Number.parseInt(pageNumber.value, 10);
+      if (!Number.isInteger(requested) || requested < 1 || requested > totalPages) return;
+      document.querySelector(`#page-${requested}`)?.scrollIntoView({ block: 'start' });
+      history.replaceState(null, '', `#page-${requested}`);
+    }
 
-    <div class="relative z-50" id="interface-container"></div>
-    <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js"></script>
-    <script src="./assets/scorm.js"></script>
-    <script src="./assets/base.bundle.local.js"></script>
+    function buildPage(page, number, html) {
+      const parsed = new DOMParser().parseFromString(html, 'text/html');
+      const source = parsed.querySelector('#content');
+      if (!source || !source.querySelector('section')) throw new Error('No textbook content found');
+      const article = document.createElement('article');
+      article.className = 'textbook-page';
+      article.id = `page-${number}`;
+      article.dataset.sectionId = page.section_id;
+      article.setAttribute('aria-label', `Page ${number}`);
+      const marker = document.createElement('div');
+      marker.className = 'page-marker';
+      marker.textContent = `Page ${number}`;
+      const content = document.createElement('div');
+      content.className = 'page-content';
+      for (const child of [...source.children]) content.append(child.cloneNode(true));
+      content.querySelectorAll('.opacity-0').forEach(element => element.classList.remove('opacity-0'));
+      content.querySelectorAll('[id="interface-container"], [id="nav-container"], script').forEach(element => element.remove());
+      article.append(marker, content);
+      return article;
+    }
+
+    async function loadBook() {
+      const response = await fetch('content/pages.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('The textbook page list could not be loaded');
+      const pages = await response.json();
+      totalPages = pages.length;
+      pageNumber.max = totalPages;
+      loading.remove();
+      const batchSize = 10;
+      for (let start = 0; start < pages.length; start += batchSize) {
+        const batch = pages.slice(start, start + batchSize);
+        const results = await Promise.all(batch.map(async (page, offset) => {
+          const number = start + offset + 1;
+          try {
+            const pageResponse = await fetch(page.href, { cache: 'no-store' });
+            if (!pageResponse.ok) throw new Error(`HTTP ${pageResponse.status}`);
+            return buildPage(page, number, await pageResponse.text());
+          } catch (error) {
+            const message = document.createElement('article');
+            message.className = 'textbook-page load-error';
+            message.id = `page-${number}`;
+            message.textContent = `Page ${number} could not be displayed: ${error.message}`;
+            return message;
+          }
+        }));
+        textbook.append(...results);
+        status.textContent = `${Math.min(start + batch.length, totalPages)} of ${totalPages} loaded`;
+      }
+      status.textContent = `${totalPages} pages`;
+      const requested = Number.parseInt(location.hash.replace('#page-', ''), 10);
+      if (Number.isInteger(requested) && requested >= 1 && requested <= totalPages) {
+        pageNumber.value = requested;
+        jumpToPage();
+      }
+    }
+
+    go.addEventListener('click', jumpToPage);
+    pageNumber.addEventListener('keydown', event => { if (event.key === 'Enter') jumpToPage(); });
+    loadBook().catch(error => {
+      loading.className = 'load-error';
+      loading.textContent = `${error.message}. Please reload this page.`;
+      status.textContent = 'Unable to load';
+    });
+  </script>
 </body>
-
 </html>

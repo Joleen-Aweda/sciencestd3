@@ -3,101 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Accessible reader for Science Pupil's Book Standard Three">
+  <meta http-equiv="refresh" content="0; url=index.html">
+  <link rel="canonical" href="index.html">
   <title>Science Pupil's Book Standard Three</title>
-  <style>
-    :root { color-scheme: light; font-family: Arial, sans-serif; }
-    * { box-sizing: border-box; }
-    body { margin: 0; overflow: hidden; background: #eef8fc; color: #18323d; }
-    header { min-height: 68px; padding: 10px 18px; display: flex; gap: 16px; align-items: center; justify-content: space-between; background: #087ea4; color: white; box-shadow: 0 2px 8px #0b405533; }
-    h1 { margin: 0; font-size: clamp(1rem, 2.4vw, 1.35rem); }
-    nav { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
-    button, input { min-height: 42px; border-radius: 10px; font: inherit; }
-    button { border: 2px solid white; padding: 7px 14px; background: white; color: #075e7c; font-weight: 700; cursor: pointer; }
-    button:disabled { opacity: .45; cursor: not-allowed; }
-    label { font-weight: 700; }
-    input { width: 5.2rem; border: 2px solid #c4e6f2; padding: 6px 9px; text-align: center; }
-    #status { min-width: 8.5rem; text-align: center; font-weight: 700; }
-    iframe { display: block; width: 100%; height: calc(100vh - 68px); border: 0; background: white; }
-    .error { padding: 2rem; text-align: center; font-size: 1.1rem; }
-    @media (max-width: 760px) {
-      body { overflow: auto; }
-      header { align-items: stretch; flex-direction: column; }
-      iframe { height: calc(100vh - 132px); }
-      nav { gap: 6px; }
-      button { padding-inline: 10px; }
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Science Pupil's Book Standard Three</h1>
-    <nav aria-label="Book navigation">
-      <button id="previous" type="button" aria-label="Previous page">Previous</button>
-      <span id="status" aria-live="polite">Loading…</span>
-      <button id="next" type="button" aria-label="Next page">Next</button>
-      <label for="page-number">Go to</label>
-      <input id="page-number" type="number" min="1" value="1" inputmode="numeric" aria-label="Page number">
-      <button id="go" type="button">Go</button>
-    </nav>
-  </header>
-  <iframe id="book" title="Science Pupil's Book Standard Three"></iframe>
-  <noscript><p class="error">JavaScript is required to navigate this digital textbook.</p></noscript>
-  <script>
-    const frame = document.querySelector('#book');
-    const previous = document.querySelector('#previous');
-    const next = document.querySelector('#next');
-    const status = document.querySelector('#status');
-    const pageNumber = document.querySelector('#page-number');
-    const go = document.querySelector('#go');
-    let pages = [];
-    let position = 0;
-
-    function showPage() {
-      if (!pages.length) return;
-      frame.src = pages[position].href;
-      status.textContent = `Page ${position + 1} of ${pages.length}`;
-      pageNumber.value = position + 1;
-      pageNumber.max = pages.length;
-      previous.disabled = position === 0;
-      next.disabled = position === pages.length - 1;
-      history.replaceState(null, '', `#page-${position + 1}`);
-    }
-
-    function goToPage() {
-      const requested = Number.parseInt(pageNumber.value, 10);
-      if (!Number.isInteger(requested) || requested < 1 || requested > pages.length) {
-        pageNumber.value = position + 1;
-        return;
-      }
-      position = requested - 1;
-      showPage();
-    }
-
-    previous.addEventListener('click', () => { if (position > 0) { position--; showPage(); } });
-    next.addEventListener('click', () => { if (position + 1 < pages.length) { position++; showPage(); } });
-    go.addEventListener('click', goToPage);
-    pageNumber.addEventListener('keydown', event => { if (event.key === 'Enter') goToPage(); });
-    document.addEventListener('keydown', event => {
-      if (event.target === pageNumber) return;
-      if (event.key === 'ArrowLeft') previous.click();
-      if (event.key === 'ArrowRight') next.click();
-    });
-
-    fetch('content/pages.json', { cache: 'no-store' })
-      .then(response => { if (!response.ok) throw new Error('Unable to load pages'); return response.json(); })
-      .then(data => {
-        pages = data.filter(page => page && page.href && page.section_id);
-        if (!pages.length) throw new Error('No readable pages found');
-        const requested = Number.parseInt(location.hash.replace('#page-', ''), 10);
-        if (Number.isInteger(requested) && requested >= 1 && requested <= pages.length) position = requested - 1;
-        showPage();
-      })
-      .catch(error => {
-        status.textContent = 'Book unavailable';
-        frame.remove();
-        document.body.insertAdjacentHTML('beforeend', `<p class="error">${error.message}. Please reload the page.</p>`);
-      });
-  </script>
+  <p>Continue to the <a href="index.html">complete textbook webpage</a>.</p>
 </body>
 </html>
