@@ -24,10 +24,11 @@ try:
         assert 'id="content"' in html
     with urllib.request.urlopen(base + "index.html") as response:
         landing = response.read().decode("utf-8")
-    assert "<iframe" not in landing.lower()
-    assert "base.bundle" not in landing
-    assert "batchSize = 10" in landing
-    print(f"PASS: continuous site serves pages 1, 58, 59 and {len(pages)} with no reader iframe.")
+    assert 'url=pg001_sec001.html' in landing
+    first_html = urllib.request.urlopen(base + pages[0]["href"]).read().decode("utf-8")
+    assert 'id="nav-container"' in first_html
+    assert 'assets/base.bundle.local.js' in first_html
+    print(f"PASS: native ADT pages 1, 58, 59 and {len(pages)} load with consecutive navigation.")
 finally:
     server.shutdown()
     server.server_close()
