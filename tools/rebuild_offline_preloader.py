@@ -12,6 +12,7 @@ if not match:
 
 old = json.loads(match.group(1))
 pages = json.loads((ROOT / "content/pages.json").read_text(encoding="utf-8"))
+bundle_version = json.loads((ROOT / "assets/config.json").read_text(encoding="utf-8"))["bundleVersion"]
 
 priority = [
     "./assets/config.json",
@@ -40,7 +41,7 @@ PRELOADER.write_text(updated, encoding="utf-8")
 for page in pages:
     path = ROOT / page["href"]
     html = path.read_text(encoding="utf-8")
-    html = re.sub(r"assets/offline-preloader\.js(?:\?v=\d+)?", "assets/offline-preloader.js?v=2", html)
+    html = re.sub(r"assets/offline-preloader\.js(?:\?v=\d+)?", f"assets/offline-preloader.js?v={bundle_version}", html)
     path.write_text(html, encoding="utf-8")
 
-print(f"Embedded {len(pages)} consecutive pages with bundle version 2.")
+print(f"Embedded {len(pages)} consecutive pages with bundle version {bundle_version}.")
