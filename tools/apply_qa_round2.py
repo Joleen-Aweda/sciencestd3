@@ -206,11 +206,11 @@ for name in REMOVED:
 
 config_path = ROOT / "assets/config.json"
 config = json.loads(config_path.read_text(encoding="utf-8"))
-config["bundleVersion"] = "10"
+config["bundleVersion"] = "11"
 config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 for html_path in ROOT.glob("*.html"):
     html = html_path.read_text(encoding="utf-8")
-    html = re.sub(r"offline-preloader\.js\?v=\d+", "offline-preloader.js?v=10", html)
+    html = re.sub(r"offline-preloader\.js\?v=\d+", "offline-preloader.js?v=11", html)
     html_path.write_text(html, encoding="utf-8")
 
 print(f"Merged {len(REMOVED)} source pages; navigation now has {len(pages)} consecutive pages.")

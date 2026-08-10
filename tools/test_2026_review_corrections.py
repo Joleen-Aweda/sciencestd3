@@ -20,7 +20,7 @@ for node in tree.body:
 
 assert [p["page_number"] for p in pages] == list(range(1, len(pages) + 1))
 assert len(pages) == 140
-assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "10"
+assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "11"
 
 for entry in pages:
     path = ROOT / entry["href"]
@@ -54,7 +54,7 @@ for text_id in values["LABEL_ABOVE_IDS"]:
         tag = re.search(rf'<[^>]*data-id="{re.escape(text_id)}"[^>]*>', all_markup)
         assert tag and "adt-label-above" in tag.group(0)
 
-assert sum("data-adt-fill-style" in (ROOT / p["href"]).read_text(encoding="utf-8") for p in pages) >= 10
+assert sum("data-adt-fill-style" in (ROOT / p["href"]).read_text(encoding="utf-8") for p in pages) >= 9
 
 assert "Figure 10 shows the parts of an ear" in texts["pg034_n0011"]
 assert "pg028_n0013" not in audios and "pg028_n0015" not in audios

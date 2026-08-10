@@ -27,7 +27,6 @@ for index, entry in enumerate(pages, 1):
     assert len(ids) == len(set(ids)), entry["href"]
 
 merge_expectations = {
-    "pg022_sec001.html": {"pg022_sec001", "pg022_sec002", "pg022_sec003", "pg022_sec004"},
     "pg037_sec002.html": {"pg037_sec002", "pg037_sec003", "pg038_sec001"},
     "pg080_sec001.html": {"pg080_sec001", "pg080_sec002", "pg080_sec003"},
     "pg096_sec002.html": {"pg096_sec002", "pg097_sec001"},
@@ -37,7 +36,7 @@ for target, section_ids in merge_expectations.items():
     assert section_ids <= set(re.findall(r'data-section-id="([^"]+)"', markup))
 
 for target in (
-    "pg022_sec001.html", "pg035_sec002.html", "pg037_sec002.html",
+    "pg035_sec002.html", "pg037_sec002.html",
     "pg053_sec001.html", "pg061_sec003.html", "pg075_sec001.html",
     "pg080_sec001.html", "pg083_sec002.html", "pg088_sec001.html",
     "pg096_sec002.html",
@@ -45,6 +44,15 @@ for target in (
     markup = (ROOT / target).read_text(encoding="utf-8")
     content_tag = re.search(r'<div\b(?=[^>]*\bid="content")[^>]*>', markup).group(0)
     assert "flex flex-col gap-8" in content_tag, target
+
+chapter_two = (ROOT / "pg022_sec001.html").read_text(encoding="utf-8")
+assert set(re.findall(r'data-merged-section-id="([^"]+)"', chapter_two)) == {
+    "pg022_sec002", "pg022_sec003", "pg022_sec004",
+}
+assert chapter_two.count("<section ") == 1
+assert "bg-gradient-to-b from-white to-sky-50" in chapter_two
+assert "rounded-[2rem] bg-sky-100" in chapter_two
+assert "rounded-t-[1.5rem]" in chapter_two
 
 page70 = (ROOT / "pg070_sec001.html").read_text(encoding="utf-8")
 assert page70.index("pg070_n0007") < page70.index("pg068_n0024") < page70.index("pg070_n0009")
