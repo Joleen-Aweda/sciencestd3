@@ -89,8 +89,13 @@ import imageio_ffmpeg  # type: ignore
 ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
 
 def spoken(value: str) -> str:
-    value = re.sub(r"\[\[blank:[^\]]+\]\]", "blank", value)
+    value = re.sub(r"\[\[blank:[^\]]+\]\]", "", value)
     return value.replace("↑", "up arrow").replace("↓", "down arrow").replace("←", "left arrow").replace("→", "right arrow")
+
+def voice_for(text_id: str) -> str:
+    match = re.search(r"(?:pg|gl)(\d+)", text_id)
+    number = int(match.group(1)) if match else sum(map(ord, text_id))
+    return "Daniel" if number % 2 else "Reed (English (UK))"
 
 with tempfile.TemporaryDirectory(prefix="science-review-audio-") as temp:
     temp_path = Path(temp)
@@ -99,7 +104,7 @@ with tempfile.TemporaryDirectory(prefix="science-review-audio-") as temp:
             raise RuntimeError(f"No text for audio ID {text_id}")
         aiff = temp_path / f"{text_id}.aiff"
         target = AUDIO_DIR / f"{text_id}.mp3"
-        subprocess.run(["say", "-v", "Samantha", "-r", "165", "-o", str(aiff), spoken(value)], check=True)
+        subprocess.run(["say", "-v", voice_for(text_id), "-r", "165", "-o", str(aiff), spoken(value)], check=True)
         subprocess.run([
             ffmpeg, "-y", "-loglevel", "error", "-i", str(aiff),
             "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)

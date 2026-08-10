@@ -38,7 +38,7 @@ TEXT_UPDATES = {
     "pg047_n0008": "Figure 4 shows movement in animals.",
     "pg048_n0018": "Figure 6 shows how plants move towards light.",
     "pg048_n0021": "Light ↓",
-    "pg048_n0024": "Light ↓",
+    "pg048_n0024": "Light →",
     "pg049_n0005": "After one week, take plant B out of the box and study the growth directions of plants A and B.",
     "pg050_n0009": "Figure 7 shows reproduction in living things.",
     "pg051_n0017": "Figure 8(a) shows growth in human beings.",

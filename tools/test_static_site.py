@@ -23,7 +23,7 @@ try:
     embedded = json.loads(embedded_match.group(1))
     assert embedded["./content/pages.json"] == pages
     assert "./pg040_sec001.html" not in embedded
-    assert embedded["./assets/config.json"]["bundleVersion"] == "8"
+    assert embedded["./assets/config.json"]["bundleVersion"] == "9"
     for number in (1, 58, 59, len(pages)):
         with urllib.request.urlopen(base + pages[number - 1]["href"]) as response:
             html = response.read().decode("utf-8")
@@ -39,7 +39,7 @@ try:
     assert 'images/pg001_signature.png' in first_html
     page_five = urllib.request.urlopen(base + pages[4]["href"]).read().decode("utf-8")
     assert 'images/pg005_signature.png' in page_five
-    ear_page = urllib.request.urlopen(base + pages[45]["href"]).read().decode("utf-8")
+    ear_page = urllib.request.urlopen(base + "pg034_sec001.html").read().decode("utf-8")
     assert ear_page.count('data-id="pg034_n0013"') == 0
     print(f"PASS: native ADT pages 1, 58, 59 and {len(pages)} load with consecutive navigation.")
 finally:
