@@ -36,6 +36,16 @@ for target, section_ids in merge_expectations.items():
     markup = (ROOT / target).read_text(encoding="utf-8")
     assert section_ids <= set(re.findall(r'data-section-id="([^"]+)"', markup))
 
+for target in (
+    "pg022_sec001.html", "pg035_sec002.html", "pg037_sec002.html",
+    "pg053_sec001.html", "pg061_sec003.html", "pg075_sec001.html",
+    "pg080_sec001.html", "pg083_sec002.html", "pg088_sec001.html",
+    "pg096_sec002.html",
+):
+    markup = (ROOT / target).read_text(encoding="utf-8")
+    content_tag = re.search(r'<div\b(?=[^>]*\bid="content")[^>]*>', markup).group(0)
+    assert "flex flex-col gap-8" in content_tag, target
+
 page70 = (ROOT / "pg070_sec001.html").read_text(encoding="utf-8")
 assert page70.index("pg070_n0007") < page70.index("pg068_n0024") < page70.index("pg070_n0009")
 assert "<textarea" not in (ROOT / "pg052_sec002.html").read_text(encoding="utf-8")

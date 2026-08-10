@@ -23,7 +23,7 @@ try:
     embedded = json.loads(embedded_match.group(1))
     assert embedded["./content/pages.json"] == pages
     assert "./pg040_sec001.html" not in embedded
-    assert embedded["./assets/config.json"]["bundleVersion"] == "9"
+    assert embedded["./assets/config.json"]["bundleVersion"] == "10"
     for number in (1, 58, 59, len(pages)):
         with urllib.request.urlopen(base + pages[number - 1]["href"]) as response:
             html = response.read().decode("utf-8")

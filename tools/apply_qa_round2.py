@@ -43,6 +43,21 @@ def append_sections(target_name: str, source_names: list[str]) -> None:
 for target, sources in MERGES.items():
     append_sections(target, sources)
 
+# Source pages with a single section may use a fill rule that makes the
+# content container a flex row. Merged sections must read from top to bottom.
+for target in MERGES:
+    path = ROOT / target
+    text = path.read_text(encoding="utf-8")
+    text, count = re.subn(
+        r'(<div\b(?=[^>]*\bid="content")[^>]*\bclass=")([^"]*)"',
+        lambda match: f'{match.group(1)}flex flex-col gap-8 {match.group(2)}"',
+        text,
+        count=1,
+    )
+    if count != 1:
+        raise RuntimeError(f"Could not make merged layout vertical in {target}")
+    path.write_text(text, encoding="utf-8")
+
 # Activity 9 belongs immediately after Figure 22, before the next topic.
 activity = section(ROOT / ACTIVITY_SOURCE)
 path = ROOT / "pg070_sec001.html"
@@ -191,11 +206,11 @@ for name in REMOVED:
 
 config_path = ROOT / "assets/config.json"
 config = json.loads(config_path.read_text(encoding="utf-8"))
-config["bundleVersion"] = "9"
+config["bundleVersion"] = "10"
 config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 for html_path in ROOT.glob("*.html"):
     html = html_path.read_text(encoding="utf-8")
-    html = re.sub(r"offline-preloader\.js\?v=\d+", "offline-preloader.js?v=9", html)
+    html = re.sub(r"offline-preloader\.js\?v=\d+", "offline-preloader.js?v=10", html)
     html_path.write_text(html, encoding="utf-8")
 
 print(f"Merged {len(REMOVED)} source pages; navigation now has {len(pages)} consecutive pages.")
