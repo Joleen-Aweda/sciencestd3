@@ -862,7 +862,7 @@
   "pg046_n0014": "Plants respond to stimuli using roots, stem, branches and flowers.",
   "pg046_n0015": "Figure 3 shows how plants responding to light stimulus.",
   "pg046_n0018": "Light ↓",
-  "pg046_im001": "A potted plant grows straight upward under light shining from above.",
+  "pg046_im001": "Three potted plants respond to light: one grows upright under light from above, one bends left toward light entering from the left, and one bends right toward light entering from the right.",
   "pg046_n0020": "← Light",
   "pg046_im002_seg001_v1": "A potted plant bends to the left toward light shining in from the side.",
   "pg046_n0022": "Light →",
@@ -906,7 +906,7 @@
   "pg048_im003": "Plant A in a flowerpot, shown as the plant placed under light.",
   "pg048_n0022": "Plant A under light",
   "pg048_n0024": "Light →",
-  "pg048_im002": "Plant B inside a box, with part of the plant visible through a round hole where light enters.",
+  "pg048_im002": "Plant A stands under light from above. Plant B is inside a box and bends toward light entering through a round side hole.",
   "pg048_n0025": "Plant B in the box",
   "pg048_n0026": "Figure 6: Investigating how a plant moves towards light",
   "pg049_n0002": "3.",
@@ -4069,5 +4069,10 @@
   "pg104_n0029_easy_read": "Internet",
   "pg104_n0030_easy_read": "The Internet is a worldwide network of connected ICT devices.\nIt lets people communicate and share resources, such as information.",
   "pg104_n0032_easy_read": "Logic",
-  "pg104_n0033_easy_read": "Logic is a way of thinking.\nIt is reasonable and based on good judgment."
+  "pg104_n0033_easy_read": "Logic is a way of thinking.\nIt is reasonable and based on good judgment.",
+  "pg027_n0022": "(a)",
+  "pg027_n0024": "(b)",
+  "pg027_n0026": "(c)",
+  "pg027_n0028": "(d)",
+  "pg027_n0030": "(e)"
 }

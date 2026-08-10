@@ -37,13 +37,19 @@ for target, section_ids in merge_expectations.items():
 
 for target in (
     "pg035_sec002.html", "pg037_sec002.html",
-    "pg053_sec001.html", "pg061_sec003.html", "pg075_sec001.html",
+    "pg053_sec001.html", "pg075_sec001.html",
     "pg080_sec001.html", "pg083_sec002.html", "pg088_sec001.html",
     "pg096_sec002.html",
 ):
     markup = (ROOT / target).read_text(encoding="utf-8")
     content_tag = re.search(r'<div\b(?=[^>]*\bid="content")[^>]*>', markup).group(0)
     assert "flex flex-col gap-8" in content_tag, target
+
+page61_content_tag = re.search(
+    r'<div\b(?=[^>]*\bid="content")[^>]*>',
+    (ROOT / "pg061_sec003.html").read_text(encoding="utf-8"),
+).group(0)
+assert "flex flex-col gap-3" in page61_content_tag
 
 chapter_two = (ROOT / "pg022_sec001.html").read_text(encoding="utf-8")
 assert set(re.findall(r'data-merged-section-id="([^"]+)"', chapter_two)) == {
@@ -61,7 +67,8 @@ assert "list-none" in (ROOT / "pg093_sec001.html").read_text(encoding="utf-8")
 assert "figure5-arrow" in (ROOT / "pg087_sec001.html").read_text(encoding="utf-8")
 
 for text_id in ("pg027_n0022", "pg027_n0024", "pg027_n0026", "pg027_n0028", "pg027_n0030"):
-    assert text_id not in texts and text_id not in audios
+    assert text_id in texts and text_id in audios
+    assert (ROOT / "content/i18n/en/audio" / audios[text_id]).stat().st_size > 1000
 
 requested_audio = {
     "pg020_n0048", "pg020_n0049", "pg021_n0002", "pg031_n0009",

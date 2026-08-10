@@ -20,7 +20,7 @@ for node in tree.body:
 
 assert [p["page_number"] for p in pages] == list(range(1, len(pages) + 1))
 assert len(pages) == 140
-assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "11"
+assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "12"
 
 for entry in pages:
     path = ROOT / entry["href"]
