@@ -104,7 +104,7 @@ with tempfile.TemporaryDirectory(prefix="science-review-audio-") as temp:
             raise RuntimeError(f"No text for audio ID {text_id}")
         aiff = temp_path / f"{text_id}.aiff"
         target = AUDIO_DIR / f"{text_id}.mp3"
-        subprocess.run(["say", "-v", voice_for(text_id), "-r", "165", "-o", str(aiff), spoken(value)], check=True)
+        subprocess.run(["say", "-v", voice_for(text_id), "-r", "155", "-o", str(aiff), spoken(value)], check=True)
         subprocess.run([
             ffmpeg, "-y", "-loglevel", "error", "-i", str(aiff),
             "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)

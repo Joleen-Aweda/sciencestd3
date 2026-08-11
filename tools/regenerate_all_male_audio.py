@@ -9,6 +9,8 @@ import tempfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from narration_rules import normalize_spoken
+
 
 ROOT = Path(__file__).resolve().parents[1]
 I18N = ROOT / "content/i18n/en"
@@ -62,11 +64,7 @@ def voice_for(text_id: str) -> str:
 
 def spoken(text_id: str, value: str) -> str:
     value = OVERRIDES.get(text_id, value)
-    value = re.sub(r"\[\[blank:[^\]]+\]\]", "", value)
-    value = value.replace("↑", "up arrow").replace("↓", "down arrow")
-    value = value.replace("←", "left arrow").replace("→", "right arrow")
-    value = re.sub(r"\(([a-h])\)", r"\1.", value, flags=re.IGNORECASE)
-    return re.sub(r"\s+([.,;:!?])", r"\1", value).strip()
+    return normalize_spoken(text_id, value)
 
 
 missing = [text_id for text_id in AUDIOS if text_id not in TEXTS and text_id not in OVERRIDES]
@@ -87,7 +85,7 @@ def generate(job: tuple[str, str]) -> str:
         aiff = Path(temp) / f"{text_id}.aiff"
         target = AUDIO_DIR / AUDIOS[text_id]
         subprocess.run(
-            ["say", "-v", voice_for(text_id), "-r", "165", "-o", str(aiff), "--", spoken(text_id, value)],
+            ["say", "-v", voice_for(text_id), "-r", "155", "-o", str(aiff), "--", spoken(text_id, value)],
             check=True, timeout=180, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         )
         subprocess.run(
