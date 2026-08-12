@@ -16,8 +16,10 @@ assert normalize_spoken("pg053_n0031", "(i)") == "(i)"
 
 all_audio = (ROOT / "tools/regenerate_all_male_audio.py").read_text(encoding="utf-8")
 review_audio = (ROOT / "tools/regenerate_review_audio.py").read_text(encoding="utf-8")
-assert '"-r", "155"' in all_audio
-assert '"-r", "155"' in review_audio
-assert '"-r", "165"' not in all_audio + review_audio
+assert 'VOICE = "Reed (English (UK))"' in all_audio
+assert 'VOICE = "Reed (English (UK))"' in review_audio
+assert 'SPEAKING_RATE = "140"' in all_audio
+assert 'SPEAKING_RATE = "140"' in review_audio
+assert "Daniel" not in all_audio + review_audio
 
-print("PASS: Roman numerals and the slightly slower narration rate are configured.")
+print("PASS: Roman numerals, one adult male voice, and the slower narration rate are configured.")

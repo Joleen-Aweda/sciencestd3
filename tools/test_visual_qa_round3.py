@@ -18,7 +18,7 @@ shape_labels = {
 for text_id, (letter, filename) in shape_labels.items():
     assert page27.index(f'data-id="{text_id}"') < page27.index(filename)
     assert texts[text_id] == f"({letter})"
-    assert (ROOT / "content/i18n/en/audio" / audios[text_id]).stat().st_size > 1000
+    assert (ROOT / "content/i18n/en/audio" / audios[text_id].split("?", 1)[0]).stat().st_size > 1000
 assert page27.count("shape_pg027_") == 5
 
 page46 = (ROOT / "pg046_sec001.html").read_text(encoding="utf-8")
@@ -36,6 +36,6 @@ assert "mt-auto flex items-end" not in page61
 assert "flex flex-col gap-3 container" in page61
 
 for text_id in ("pg046_im001", "pg048_im002"):
-    assert (ROOT / "content/i18n/en/audio" / audios[text_id]).stat().st_size > 1000
+    assert (ROOT / "content/i18n/en/audio" / audios[text_id].split("?", 1)[0]).stat().st_size > 1000
 
 print("PASS: visual QA round three diagrams, labels, spacing and typography are synchronized.")

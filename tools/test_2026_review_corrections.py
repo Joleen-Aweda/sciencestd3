@@ -20,7 +20,7 @@ for node in tree.body:
 
 assert [p["page_number"] for p in pages] == list(range(1, len(pages) + 1))
 assert len(pages) == 140
-assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "15"
+assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "17"
 
 for entry in pages:
     path = ROOT / entry["href"]
@@ -43,7 +43,7 @@ for text_id, expected in values["TEXT_UPDATES"].items():
     normalized_expected = re.sub(r"\s+", " ", expected).strip()
     assert inline == normalized_expected, f"inline/localized mismatch {text_id}: {inline!r}"
     filename = audios.get(text_id)
-    assert filename and (ROOT / "content/i18n/en/audio" / filename).stat().st_size > 1000, text_id
+    assert filename and (ROOT / "content/i18n/en/audio" / filename.split("?", 1)[0]).stat().st_size > 1000, text_id
 
 for text_id in values["REMOVE_IDS"]:
     assert text_id not in texts
@@ -58,9 +58,9 @@ for text_id in values["LABEL_ABOVE_IDS"]:
 assert sum("data-adt-fill-style" in (ROOT / p["href"]).read_text(encoding="utf-8") for p in pages) >= 9
 
 assert "Figure 10 shows the parts of an ear" in texts["pg034_n0011"]
-assert "pg028_n0013" not in audios and "pg028_n0015" not in audios
+assert "pg028_n0013" in audios and "pg028_n0015" in audios
 assert "↑ means up" in texts["pg094_n0005"]
-assert all((ROOT / "content/i18n/en/audio" / audios[x]).read_bytes()[:3] in {b"ID3", b"\xff\xf3\x80", b"\xff\xf3\xc0", b"\xff\xfb\x90"} for x in values["TEXT_UPDATES"])
+assert all((ROOT / "content/i18n/en/audio" / audios[x].split("?", 1)[0]).read_bytes()[:3] in {b"ID3", b"\xff\xf3\x80", b"\xff\xf3\xc0", b"\xff\xfb\x90"} for x in values["TEXT_UPDATES"])
 assert all_markup.count("<textarea") == 37
 
 print("PASS: 132-row review implementation is synchronized across text, HTML, layout and narration.")

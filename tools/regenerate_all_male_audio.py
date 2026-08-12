@@ -1,8 +1,8 @@
-"""Regenerate the complete English narration with two adult male voices."""
+"""Regenerate the complete English narration with one adult male voice."""
 
 import ast
+import argparse
 import json
-import re
 import shutil
 import subprocess
 import tempfile
@@ -19,6 +19,11 @@ AUDIOS_PATH = I18N / "audios.json"
 AUDIOS = json.loads(AUDIOS_PATH.read_text(encoding="utf-8"))
 AUDIO_DIR = I18N / "audio"
 FFMPEG = Path("/tmp/codex-science-audio/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1")
+
+
+def audio_path(text_id: str) -> Path:
+    """Resolve a cache-versioned audio mapping to its local MP3 path."""
+    return AUDIO_DIR / AUDIOS[text_id].split("?", 1)[0]
 
 
 def load_existing_overrides() -> dict[str, str]:
@@ -56,10 +61,8 @@ OVERRIDES = load_existing_overrides() | {
 }
 
 
-def voice_for(text_id: str) -> str:
-    match = re.search(r"(?:pg|gl)(\d+)", text_id)
-    number = int(match.group(1)) if match else sum(map(ord, text_id))
-    return "Daniel" if number % 2 else "Reed (English (UK))"
+VOICE = "Reed (English (UK))"
+SPEAKING_RATE = "140"
 
 
 def spoken(text_id: str, value: str) -> str:
@@ -79,13 +82,13 @@ def generate(job: tuple[str, str]) -> str:
     if text_id.endswith("_easy_read"):
         base_id = text_id.removesuffix("_easy_read")
         if TEXTS.get(base_id) == value and base_id in AUDIOS:
-            shutil.copyfile(AUDIO_DIR / AUDIOS[base_id], AUDIO_DIR / AUDIOS[text_id])
+            shutil.copyfile(audio_path(base_id), audio_path(text_id))
             return text_id
     with tempfile.TemporaryDirectory(prefix="science-male-audio-") as temp:
         aiff = Path(temp) / f"{text_id}.aiff"
-        target = AUDIO_DIR / AUDIOS[text_id]
+        target = audio_path(text_id)
         subprocess.run(
-            ["say", "-v", voice_for(text_id), "-r", "155", "-o", str(aiff), "--", spoken(text_id, value)],
+            ["say", "-v", VOICE, "-r", SPEAKING_RATE, "-o", str(aiff), "--", spoken(text_id, value)],
             check=True, timeout=180, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         )
         subprocess.run(
@@ -93,18 +96,34 @@ def generate(job: tuple[str, str]) -> str:
              "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)],
             check=True, timeout=180,
         )
+        if target.stat().st_size <= 1000:
+            raise RuntimeError(f"Invalid narration output for {text_id}: {target.stat().st_size} bytes")
     return text_id
 
 
 if not FFMPEG.is_file():
     raise RuntimeError(f"ffmpeg not found: {FFMPEG}")
 
-with ThreadPoolExecutor(max_workers=12) as pool:
-    futures = [pool.submit(generate, job) for job in jobs]
-    for index, future in enumerate(as_completed(futures), 1):
-        text_id = future.result()
-        if index % 100 == 0 or index == len(jobs):
-            print(f"[{index}/{len(jobs)}] {text_id}", flush=True)
+parser = argparse.ArgumentParser()
+parser.add_argument("--start-index", type=int, default=0, help="Resume at this zero-based sorted job index")
+parser.add_argument("--ids", nargs="*", help="Generate only these narration IDs")
+args = parser.parse_args()
+selected = [job for job in jobs if job[0] in set(args.ids)] if args.ids else jobs[args.start_index:]
+base_jobs = [job for job in selected if not job[0].endswith("_easy_read")]
+easy_jobs = [job for job in selected if job[0].endswith("_easy_read")]
+completed = 0 if args.ids else args.start_index
+
+# Generate base narration first, then easy-read duplicates, so copies can never
+# race a source file that is still being written.
+for phase in (base_jobs, easy_jobs):
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = [pool.submit(generate, job) for job in phase]
+        for future in as_completed(futures):
+            text_id = future.result()
+            completed += 1
+            total = len(selected) if args.ids else len(jobs)
+            if completed % 100 == 0 or completed == total:
+                print(f"[{completed}/{total}] {text_id}", flush=True)
 
 AUDIOS_PATH.write_text(json.dumps(AUDIOS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Regenerated {len(jobs)} files with Daniel and Reed; removed {len(missing)} stale mappings.")
+print(f"Regenerated {len(jobs)} files with {VOICE} at {SPEAKING_RATE} words per minute; removed {len(missing)} stale mappings.")
