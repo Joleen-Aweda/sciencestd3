@@ -108,8 +108,18 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--start-index", type=int, default=0, help="Resume at this zero-based sorted job index")
 parser.add_argument("--ids", nargs="*", help="Generate only these narration IDs")
 parser.add_argument("--images-only", action="store_true", help="Generate only image-description narration")
+parser.add_argument("--manual-edits", action="store_true", help="Generate narration changed by the latest manual text sync")
 args = parser.parse_args()
-if args.images_only:
+if args.manual_edits:
+    manual_base_ids = {
+        "pg045_n0010", "pg047_n0008", "pg050_n0009", "pg051_n0017",
+        "pg052_n0004", "pg060_n0021", "pg064_n0050", "pg066_n0022",
+        "pg067_n0008", "pg067_n0022", "pg069_n0006", "pg069_n0017",
+        "pg069_n0018", "pg084_n0032", "pg085_n0031", "pg090_n0003",
+    }
+    manual_ids = manual_base_ids | {text_id + "_easy_read" for text_id in manual_base_ids}
+    selected = [job for job in jobs if job[0] in manual_ids]
+elif args.images_only:
     selected = [job for job in jobs if "_im" in job[0]]
 elif args.ids:
     selected = [job for job in jobs if job[0] in set(args.ids)]
@@ -117,7 +127,7 @@ else:
     selected = jobs[args.start_index:]
 base_jobs = [job for job in selected if not job[0].endswith("_easy_read")]
 easy_jobs = [job for job in selected if job[0].endswith("_easy_read")]
-completed = 0 if args.ids or args.images_only else args.start_index
+completed = 0 if args.ids or args.images_only or args.manual_edits else args.start_index
 
 # Generate base narration first, then easy-read duplicates, so copies can never
 # race a source file that is still being written.
@@ -127,7 +137,7 @@ for phase in (base_jobs, easy_jobs):
         for future in as_completed(futures):
             text_id = future.result()
             completed += 1
-            total = len(selected) if args.ids or args.images_only else len(jobs)
+            total = len(selected) if args.ids or args.images_only or args.manual_edits else len(jobs)
             if completed % 100 == 0 or completed == total:
                 print(f"[{completed}/{total}] {text_id}", flush=True)
 
