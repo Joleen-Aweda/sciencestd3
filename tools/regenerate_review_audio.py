@@ -67,6 +67,7 @@ SPOKEN_OVERRIDES = {
     "pg036_n0033": "Roman four. Detecting the smell of a burning material",
     "pg043_n0007": "Number",
     "pg044_n0005": "Number",
+    "pg047_n0027": "Materials: Two healthy potted plants, a box with a small hole that allows passage of light.",
     "pg059_n0033": "Number",
     "pg064_n0016": "Roman one. Mammals",
     "pg064_n0023": "Roman two. Reptiles",
@@ -107,7 +108,7 @@ with tempfile.TemporaryDirectory(prefix="science-review-audio-") as temp:
             ffmpeg, "-y", "-loglevel", "error", "-i", str(aiff),
             "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)
         ], check=True)
-        AUDIOS[text_id] = target.name + "?v=19"
+        AUDIOS[text_id] = target.name + "?v=20"
         print(f"[{index}/{len(to_generate)}] {text_id}")
 
 AUDIOS_PATH.write_text(json.dumps(AUDIOS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

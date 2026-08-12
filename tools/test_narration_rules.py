@@ -16,6 +16,7 @@ assert normalize_spoken("pg053_n0031", "(i)") == "(i)"
 
 all_audio = (ROOT / "tools/regenerate_all_male_audio.py").read_text(encoding="utf-8")
 review_audio = (ROOT / "tools/regenerate_review_audio.py").read_text(encoding="utf-8")
+assert '"pg047_n0027": "Materials: Two healthy potted plants' in review_audio
 assert 'VOICE = "Reed (English (UK))"' in all_audio
 assert 'VOICE = "Reed (English (UK))"' in review_audio
 assert 'SPEAKING_RATE = "140"' in all_audio
