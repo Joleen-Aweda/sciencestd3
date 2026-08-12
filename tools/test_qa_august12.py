@@ -79,7 +79,7 @@ for text_id, value in expected.items():
     audio = ROOT / "content/i18n/en/audio" / f"{text_id}.mp3"
     assert audio.exists() and audio.stat().st_size > 1000
 
-assert json.loads(read("assets/config.json"))["bundleVersion"] == "17"
-assert "offline-preloader.js?v=17" in page87
+assert json.loads(read("assets/config.json"))["bundleVersion"] == "18"
+assert "offline-preloader.js?v=18" in page87
 
 print("PASS: all 16 August 12 QA corrections are present and synchronized.")

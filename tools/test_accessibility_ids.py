@@ -52,10 +52,12 @@ for page in sorted(ROOT.glob("pg*.html")):
         assert image.get("alt", "").strip(), f"image without alt text in {page.name}: {image.get('src')}"
         assert text_id in TEXTS, f"missing image description {text_id} in {page.name}"
         assert len(TEXTS[text_id].split()) >= 3, f"image description is too short for {text_id}"
+        assert TEXTS[text_id].startswith(("Image (", "This image shows", "This diagram shows")), f"image description is not explicit for {text_id}"
+        assert image.get("alt", "").strip() == TEXTS[text_id], f"HTML alt/localized description mismatch for {text_id}"
         assert text_id in AUDIOS, f"missing image narration mapping for {text_id}"
 
 for text_id, filename in AUDIOS.items():
-    assert filename.endswith("?v=17"), f"audio mapping is not cache-versioned: {text_id} -> {filename}"
+    assert filename.endswith("?v=18"), f"audio mapping is not cache-versioned: {text_id} -> {filename}"
     audio = AUDIO_DIR / filename.split("?", 1)[0]
     assert audio.exists(), f"missing narration file for {text_id}: {filename}"
     assert audio.stat().st_size > 1000, f"invalid narration file for {text_id}: {filename}"

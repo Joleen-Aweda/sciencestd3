@@ -107,7 +107,7 @@ with tempfile.TemporaryDirectory(prefix="science-review-audio-") as temp:
             ffmpeg, "-y", "-loglevel", "error", "-i", str(aiff),
             "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)
         ], check=True)
-        AUDIOS[text_id] = target.name + "?v=17"
+        AUDIOS[text_id] = target.name + "?v=18"
         print(f"[{index}/{len(to_generate)}] {text_id}")
 
 AUDIOS_PATH.write_text(json.dumps(AUDIOS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

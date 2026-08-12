@@ -107,11 +107,17 @@ if not FFMPEG.is_file():
 parser = argparse.ArgumentParser()
 parser.add_argument("--start-index", type=int, default=0, help="Resume at this zero-based sorted job index")
 parser.add_argument("--ids", nargs="*", help="Generate only these narration IDs")
+parser.add_argument("--images-only", action="store_true", help="Generate only image-description narration")
 args = parser.parse_args()
-selected = [job for job in jobs if job[0] in set(args.ids)] if args.ids else jobs[args.start_index:]
+if args.images_only:
+    selected = [job for job in jobs if "_im" in job[0]]
+elif args.ids:
+    selected = [job for job in jobs if job[0] in set(args.ids)]
+else:
+    selected = jobs[args.start_index:]
 base_jobs = [job for job in selected if not job[0].endswith("_easy_read")]
 easy_jobs = [job for job in selected if job[0].endswith("_easy_read")]
-completed = 0 if args.ids else args.start_index
+completed = 0 if args.ids or args.images_only else args.start_index
 
 # Generate base narration first, then easy-read duplicates, so copies can never
 # race a source file that is still being written.
@@ -121,7 +127,7 @@ for phase in (base_jobs, easy_jobs):
         for future in as_completed(futures):
             text_id = future.result()
             completed += 1
-            total = len(selected) if args.ids else len(jobs)
+            total = len(selected) if args.ids or args.images_only else len(jobs)
             if completed % 100 == 0 or completed == total:
                 print(f"[{completed}/{total}] {text_id}", flush=True)
 
