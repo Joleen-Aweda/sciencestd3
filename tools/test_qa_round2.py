@@ -38,12 +38,18 @@ for target, section_ids in merge_expectations.items():
 for target in (
     "pg035_sec002.html", "pg037_sec002.html",
     "pg053_sec001.html", "pg075_sec001.html",
-    "pg080_sec001.html", "pg083_sec002.html", "pg088_sec001.html",
+    "pg083_sec002.html", "pg088_sec001.html",
     "pg096_sec002.html",
 ):
     markup = (ROOT / target).read_text(encoding="utf-8")
     content_tag = re.search(r'<div\b(?=[^>]*\bid="content")[^>]*>', markup).group(0)
     assert "flex flex-col gap-8" in content_tag, target
+
+page80_content_tag = re.search(
+    r'<div\b(?=[^>]*\bid="content")[^>]*>',
+    (ROOT / "pg080_sec001.html").read_text(encoding="utf-8"),
+).group(0)
+assert "flex flex-col gap-6" in page80_content_tag
 
 page61_content_tag = re.search(
     r'<div\b(?=[^>]*\bid="content")[^>]*>',

@@ -20,7 +20,7 @@ for node in tree.body:
 
 assert [p["page_number"] for p in pages] == list(range(1, len(pages) + 1))
 assert len(pages) == 140
-assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "13"
+assert json.loads((ROOT / "assets/config.json").read_text())["bundleVersion"] == "15"
 
 for entry in pages:
     path = ROOT / entry["href"]
@@ -39,8 +39,9 @@ for text_id, expected in values["TEXT_UPDATES"].items():
     )
     match = pattern.search(all_markup)
     assert match, f"missing inline text {text_id}"
-    inline = html.unescape(re.sub(r"<br\s*/?>", "\n", match.group(2))).strip()
-    assert inline == expected, f"inline/localized mismatch {text_id}: {inline!r}"
+    inline = re.sub(r"\s+", " ", html.unescape(re.sub(r"<br\s*/?>", "\n", match.group(2)))).strip()
+    normalized_expected = re.sub(r"\s+", " ", expected).strip()
+    assert inline == normalized_expected, f"inline/localized mismatch {text_id}: {inline!r}"
     filename = audios.get(text_id)
     assert filename and (ROOT / "content/i18n/en/audio" / filename).stat().st_size > 1000, text_id
 

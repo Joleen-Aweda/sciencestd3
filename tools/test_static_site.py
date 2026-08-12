@@ -23,7 +23,7 @@ try:
     embedded = json.loads(embedded_match.group(1))
     assert embedded["./content/pages.json"] == pages
     assert "./pg040_sec001.html" not in embedded
-    assert embedded["./assets/config.json"]["bundleVersion"] == "13"
+    assert embedded["./assets/config.json"]["bundleVersion"] == "15"
     for number in (1, 58, 59, len(pages)):
         with urllib.request.urlopen(base + pages[number - 1]["href"]) as response:
             html = response.read().decode("utf-8")
@@ -36,7 +36,9 @@ try:
     first_html = urllib.request.urlopen(base + pages[0]["href"]).read().decode("utf-8")
     assert 'id="nav-container"' in first_html
     assert 'assets/base.bundle.local.js' in first_html
-    assert 'images/pg001_signature.png' in first_html
+    assert 'images/pg001_certificate.jpg' in first_html
+    assert 'pg001_certificate.png' not in first_html
+    assert 'data-id="pg001_n0012"' in first_html
     page_five = urllib.request.urlopen(base + pages[4]["href"]).read().decode("utf-8")
     assert 'images/pg005_signature.png' in page_five
     ear_page = urllib.request.urlopen(base + "pg034_sec001.html").read().decode("utf-8")
