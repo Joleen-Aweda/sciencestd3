@@ -10,6 +10,18 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .tick-choice {
+        appearance: none;
+        border: 3px solid #0891b2;
+        border-radius: 0.2rem;
+        display: grid;
+        place-content: center;
+      }
+      .tick-choice::after { content: "✓"; color: white; font-size: 1.65rem; font-weight: 800; line-height: 1; transform: scale(0); }
+      .tick-choice:checked { background: #0891b2; }
+      .tick-choice:checked::after { transform: scale(1); }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -30,9 +42,6 @@
             <table class="w-full border-collapse table-fixed bg-[#d8f1f4]">
               <thead>
                 <tr>
-                  <th class="border border-cyan-500 bg-cyan-200 p-3 max-sm:p-2 text-left align-middle w-[9%] max-sm:w-[14%]">
-                    <span class="text-[1.1rem] max-lg:text-[1rem] max-sm:text-[0.78rem] font-semibold leading-tight block" data-id="pg043_n0007">No.</span>
-                  </th>
                   <th class="border border-cyan-500 bg-cyan-200 p-3 max-sm:p-2 text-left align-middle w-[47%] max-sm:w-[38%]">
                     <span class="text-[1.1rem] max-lg:text-[1rem] max-sm:text-[0.78rem] font-semibold leading-tight block" data-id="pg043_n0009">Living and Non-living things</span>
                   </th>
@@ -46,9 +55,6 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle text-center bg-[#d8f1f4]">
-                    <span class="text-2xl max-lg:text-xl max-sm:text-lg" data-id="pg043_n0016">1.</span>
-                  </td>
                   <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle bg-[#d8f1f4]">
                     <div class="flex justify-center">
                       <img data-id="pg043_im001" src="images/pg043_im001.jpg" alt="This image shows the following. A young maize plant growing in the soil, with green leaves and roots showing underground." style="width:83.41%; max-width: 100%; height: auto;" class="h-auto max-w-full max-sm:w-[88%]">
@@ -63,9 +69,6 @@
                 </tr>
 
                 <tr>
-                  <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle text-center bg-[#d8f1f4]">
-                    <span class="text-2xl max-lg:text-xl max-sm:text-lg" data-id="pg043_n0022">2.</span>
-                  </td>
                   <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle bg-[#d8f1f4]">
                     <div class="flex justify-center">
                       <img data-id="pg043_im002" src="images/pg043_im002.jpg" alt="This image shows the following. A gray rock with an uneven, solid surface." style="width:65.47%; max-width: 100%; height: auto;" class="h-auto max-w-full max-sm:w-[62%]">
@@ -80,9 +83,6 @@
                 </tr>
 
                 <tr>
-                  <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle text-center bg-[#d8f1f4]">
-                    <span class="text-2xl max-lg:text-xl max-sm:text-lg" data-id="pg043_n0028">3.</span>
-                  </td>
                   <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle bg-[#d8f1f4]">
                     <div class="flex justify-center">
                       <img data-id="pg043_im003" src="images/pg043_im003.jpg" alt="This image shows the following. A brown cow with horns standing on four legs." style="width:82.06%; max-width: 100%; height: auto;" class="h-auto max-w-full max-sm:w-[86%]">
@@ -97,9 +97,6 @@
                 </tr>
 
                 <tr>
-                  <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle text-center bg-[#d8f1f4]">
-                    <span class="text-2xl max-lg:text-xl max-sm:text-lg" data-id="pg043_n0034">4.</span>
-                  </td>
                   <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle bg-[#d8f1f4]">
                     <div class="flex justify-center">
                       <img data-id="pg043_im004" src="images/pg043_im004.jpg" alt="This image shows the following. A green chameleon resting on a branch, with a curled tail and raised back." style="width:89.69%; max-width: 100%; height: auto;" class="h-auto max-w-full max-sm:w-[88%]">
@@ -114,9 +111,6 @@
                 </tr>
 
                 <tr>
-                  <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle text-center bg-[#d8f1f4]">
-                    <span class="text-2xl max-lg:text-xl max-sm:text-lg" data-id="pg043_n0040">5.</span>
-                  </td>
                   <td class="border border-cyan-500 p-3 max-sm:p-2 align-middle bg-[#d8f1f4]">
                     <div class="flex justify-center">
                       <img data-id="pg043_im005" src="images/pg043_im005.png" alt="This image shows the following. A small pink house with several windows and a blue roof." style="width:100%; max-width: 100%; height: auto;" class="h-auto max-w-full max-sm:w-[92%]">
@@ -144,9 +138,26 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=21"></script>
+    <script src="./assets/offline-preloader.js?v=22"></script>
     <script src="./assets/scorm.js"></script>
-    <script src="./assets/base.bundle.local.js"></script>
+    <script>
+      document.querySelectorAll('#content tbody tr').forEach((row, rowIndex) => {
+        row.querySelectorAll('input[type="checkbox"]').forEach((choice) => {
+          choice.type = 'radio';
+          choice.name = `classification-${rowIndex + 1}`;
+          choice.classList.add('tick-choice');
+        });
+      });
+    </script>
+    <script src="./assets/base.bundle.local.js?v=22"></script>
+    <script>
+      document.querySelectorAll('#content tbody tr').forEach((row) => {
+        const choices = row.querySelectorAll('.tick-choice');
+        choices.forEach((choice) => choice.addEventListener('change', () => {
+          if (choice.checked) choices.forEach((other) => { if (other !== choice) other.checked = false; });
+        }));
+      });
+    </script>
 </body>
 
 </html>

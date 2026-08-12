@@ -10,6 +10,12 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .tick-choice { appearance: none; border: 3px solid #0891b2; border-radius: 0.2rem; display: grid; place-content: center; }
+      .tick-choice::after { content: "✓"; color: white; font-size: 1.65rem; font-weight: 800; line-height: 1; transform: scale(0); }
+      .tick-choice:checked { background: #0891b2; }
+      .tick-choice:checked::after { transform: scale(1); }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -23,9 +29,30 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=21"></script>
+    <script src="./assets/offline-preloader.js?v=22"></script>
     <script src="./assets/scorm.js"></script>
-    <script src="./assets/base.bundle.local.js"></script>
+    <script>
+      document.querySelector('#content section')?.setAttribute('data-section-type', 'activity_multiple_choice');
+      document.querySelectorAll('#content tbody tr').forEach((row, rowIndex) => {
+        row.querySelectorAll('input[type="checkbox"]').forEach((choice) => {
+          choice.type = 'radio';
+          choice.name = `classification-${rowIndex + 6}`;
+          choice.classList.add('tick-choice');
+        });
+      });
+    </script>
+    <script src="./assets/base.bundle.local.js?v=22"></script>
+    <script>
+      document.querySelectorAll('#content thead tr, #content tbody tr').forEach((row) => {
+        row.firstElementChild?.remove();
+      });
+      document.querySelectorAll('#content tbody tr').forEach((row) => {
+        const choices = row.querySelectorAll('.tick-choice');
+        choices.forEach((choice) => choice.addEventListener('change', () => {
+          if (choice.checked) choices.forEach((other) => { if (other !== choice) other.checked = false; });
+        }));
+      });
+    </script>
 </body>
 
 </html>
