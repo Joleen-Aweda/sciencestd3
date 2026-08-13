@@ -42,6 +42,7 @@ for page in pages:
     path = ROOT / page["href"]
     html = path.read_text(encoding="utf-8")
     html = re.sub(r"assets/offline-preloader\.js(?:\?v=\d+)?", f"assets/offline-preloader.js?v={bundle_version}", html)
+    html = re.sub(r"assets/fonts\.css(?:\?v=\d+)?", f"assets/fonts.css?v={bundle_version}", html)
     path.write_text(html, encoding="utf-8")
 
 print(f"Embedded {len(pages)} consecutive pages with bundle version {bundle_version}.")
