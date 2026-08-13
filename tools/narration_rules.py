@@ -30,6 +30,10 @@ def normalize_spoken(text_id: str, value: str) -> str:
     value = re.sub(r"\[\[blank:[^\]]+\]\]", "", value)
     value = value.replace("↑", "up arrow").replace("↓", "down arrow")
     value = value.replace("←", "left arrow").replace("→", "right arrow")
+    # Read common ICT terminology as pupils hear it in class rather than as
+    # an ordinary word produced by the speech engine.
+    value = re.sub(r"\bICT\b", "I. C. T.", value)
+    value = re.sub(r"\bGCompris\b", "Gee Com Pree", value, flags=re.IGNORECASE)
 
     base_id = text_id.removesuffix("_easy_read")
 

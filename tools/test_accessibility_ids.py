@@ -1,6 +1,7 @@
 """Audit page data IDs, image descriptions, and narration mappings."""
 
 import json
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Optional
@@ -57,7 +58,7 @@ for page in sorted(ROOT.glob("pg*.html")):
         assert text_id in AUDIOS, f"missing image narration mapping for {text_id}"
 
 for text_id, filename in AUDIOS.items():
-    assert filename.endswith("?v=20"), f"audio mapping is not cache-versioned: {text_id} -> {filename}"
+    assert re.search(r"\?v=\d+$", filename), f"audio mapping is not cache-versioned: {text_id} -> {filename}"
     audio = AUDIO_DIR / filename.split("?", 1)[0]
     assert audio.exists(), f"missing narration file for {text_id}: {filename}"
     assert audio.stat().st_size > 1000, f"invalid narration file for {text_id}: {filename}"

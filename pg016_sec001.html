@@ -9,7 +9,12 @@
     <meta name="page-section-id" content="18" />
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="./assets/fonts.css?v=23" rel="stylesheet">
+    <link href="./assets/fonts.css?v=80" rel="stylesheet">
+    <style>
+      .figure-nine-wrap { height: 343px; }
+      @media (max-width: 1023px) { .figure-nine-wrap { height: 303px; } }
+      @media (max-width: 639px) { .figure-nine-wrap { height: auto; } }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -25,27 +30,9 @@
       </p>
     </div>
 
-    <div class="relative z-10 mt-8 ml-[150px] mr-[90px] h-[700px] max-lg:ml-[56px] max-lg:mr-4 max-lg:h-[620px] max-sm:mx-[32px] max-sm:h-auto max-sm:flex max-sm:flex-col max-sm:gap-4">
+    <div class="figure-nine-wrap relative z-10 mt-8 ml-[150px] mr-[90px] max-lg:ml-[56px] max-lg:mr-4 max-sm:mx-[32px] max-sm:flex max-sm:flex-col">
       <div class="absolute left-[45px] top-[40px] w-[360px] z-10 max-lg:left-[10px] max-lg:top-[50px] max-lg:w-[300px] max-sm:static max-sm:w-[250px] max-sm:mx-auto">
         <img data-id="pg016_im001_crop1" src="images/pg016_im001_crop1.png" alt="This image shows the following. Building materials including corrugated iron sheets, two bags of cement, and blue water pipes with a curved pipe joint." class="max-w-full h-auto object-contain" style="max-width: 100%; height: auto;">
-      </div>
-
-      <div class="absolute left-[10px] top-[145px] -rotate-[42deg] z-20 max-lg:left-[-6px] max-lg:top-[170px] max-lg:-rotate-[42deg] max-sm:static max-sm:rotate-0 max-sm:mx-auto max-sm:w-full max-sm:max-w-[250px]">
-        
-      </div>
-
-      
-
-      <div class="absolute right-[140px] top-[210px] z-20 max-lg:right-[40px] max-lg:top-[255px] max-sm:static max-sm:mx-auto max-sm:mt-[-6px]">
-        
-      </div>
-
-      
-
-      
-
-      <div class="absolute left-[320px] top-[560px] z-20 max-lg:left-[180px] max-lg:top-[520px] max-sm:static max-sm:mx-auto max-sm:mt-[-4px]">
-        
       </div>
 
       <div class="hidden">
@@ -55,7 +42,7 @@
       </div>
     </div>
 
-    <div class="relative z-10 mt-2 ml-[300px] max-lg:ml-[150px] max-sm:ml-0 max-sm:text-center">
+    <div class="relative z-10 ml-[300px] max-lg:ml-[150px] max-sm:ml-0 max-sm:text-center" style="margin-top: -6px;">
       <div data-id="pg016_n0011" class="text-[24px] leading-tight text-zinc-800 max-lg:text-[22px] max-sm:text-[18px]">Figure 9: Building materials</div>
     </div>
 
@@ -75,7 +62,7 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=23"></script>
+    <script src="./assets/offline-preloader.js?v=80"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js?v=22"></script>
 </body>

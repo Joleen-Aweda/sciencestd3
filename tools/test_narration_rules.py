@@ -21,6 +21,10 @@ assert 'VOICE = "Reed (English (UK))"' in all_audio
 assert 'VOICE = "Reed (English (UK))"' in review_audio
 assert 'SPEAKING_RATE = "140"' in all_audio
 assert 'SPEAKING_RATE = "140"' in review_audio
+assert '"pg001_n0018": "I S B N.' in review_audio
+assert '"pg002_n0004": "I S B N.' in review_audio
+assert '"pg010_n0024": "Letter c."' in review_audio
+assert '"pg037_n0055": "Walk around your home or school compound. And"' in review_audio
 assert "Daniel" not in all_audio + review_audio
 
 print("PASS: Roman numerals, one adult male voice, and the slower narration rate are configured.")
