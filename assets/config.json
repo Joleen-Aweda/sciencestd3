@@ -1,6 +1,6 @@
 {
   "title": "Science Pupil's Book Standard Three",
-  "bundleVersion": "83",
+  "bundleVersion": "87",
   "languages": {
     "available": [
       "en"
@@ -8,7 +8,7 @@
     "default": "en"
   },
   "features": {
-    "signLanguage": false,
+    "signLanguage": true,
     "easyRead": true,
     "glossary": true,
     "eli5": false,

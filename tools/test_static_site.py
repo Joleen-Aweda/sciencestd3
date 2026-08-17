@@ -22,8 +22,10 @@ try:
     assert embedded_match
     embedded = json.loads(embedded_match.group(1))
     assert embedded["./content/pages.json"] == pages
-    assert "./pg040_sec001.html" not in embedded
-    assert embedded["./assets/config.json"]["bundleVersion"] == "23"
+    assert "./pg040_sec001.html" in embedded
+    config = json.loads((ROOT / "assets/config.json").read_text(encoding="utf-8"))
+    assert embedded["./assets/config.json"]["bundleVersion"] == config["bundleVersion"]
+    assert embedded["./assets/config.json"]["features"]["signLanguage"] is True
     for number in (1, 58, 59, len(pages)):
         with urllib.request.urlopen(base + pages[number - 1]["href"]) as response:
             html = response.read().decode("utf-8")
