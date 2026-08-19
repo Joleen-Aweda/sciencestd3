@@ -2,10 +2,13 @@
 
 import ast
 import argparse
+import asyncio
 import json
 import shutil
 import subprocess
+import sys
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -18,7 +21,9 @@ TEXTS = json.loads((I18N / "texts.json").read_text(encoding="utf-8"))
 AUDIOS_PATH = I18N / "audios.json"
 AUDIOS = json.loads(AUDIOS_PATH.read_text(encoding="utf-8"))
 AUDIO_DIR = I18N / "audio"
-FFMPEG = Path("/tmp/codex-science-audio/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1")
+EDGE_TTS_DIR = Path("/tmp/codex-science-edge-tts")
+sys.path.insert(0, str(EDGE_TTS_DIR))
+import edge_tts  # type: ignore  # noqa: E402
 
 
 def audio_path(text_id: str) -> Path:
@@ -61,8 +66,8 @@ OVERRIDES = load_existing_overrides() | {
 }
 
 
-VOICE = "Reed (English (UK))"
-SPEAKING_RATE = "140"
+VOICE = "en-US-GuyNeural"
+SPEAKING_RATE = "-5%"
 
 
 def spoken(text_id: str, value: str) -> str:
@@ -84,31 +89,37 @@ def generate(job: tuple[str, str]) -> str:
         if TEXTS.get(base_id) == value and base_id in AUDIOS:
             shutil.copyfile(audio_path(base_id), audio_path(text_id))
             return text_id
-    with tempfile.TemporaryDirectory(prefix="science-male-audio-") as temp:
-        aiff = Path(temp) / f"{text_id}.aiff"
-        target = audio_path(text_id)
-        subprocess.run(
-            ["say", "-v", VOICE, "-r", SPEAKING_RATE, "-o", str(aiff), "--", spoken(text_id, value)],
-            check=True, timeout=180, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-        )
-        subprocess.run(
-            [str(FFMPEG), "-y", "-loglevel", "error", "-i", str(aiff),
-             "-ar", "24000", "-ac", "1", "-b:a", "128k", str(target)],
-            check=True, timeout=180,
-        )
-        if target.stat().st_size <= 1000:
-            raise RuntimeError(f"Invalid narration output for {text_id}: {target.stat().st_size} bytes")
+    target = audio_path(text_id)
+    with tempfile.TemporaryDirectory(prefix="science-edge-audio-") as temp:
+        generated = Path(temp) / target.name
+        last_error = None
+        for attempt in range(1, 5):
+            try:
+                asyncio.run(edge_tts.Communicate(
+                    spoken(text_id, value), VOICE, rate=SPEAKING_RATE,
+                    connect_timeout=15, receive_timeout=45,
+                ).save(str(generated)))
+                if generated.stat().st_size <= 1000:
+                    raise RuntimeError(f"Invalid narration output: {generated.stat().st_size} bytes")
+                generated.replace(target)
+                break
+            except Exception as error:
+                last_error = error
+                if attempt == 4:
+                    raise RuntimeError(f"Failed to generate {text_id}") from last_error
+                time.sleep(attempt * 2)
     return text_id
 
 
-if not FFMPEG.is_file():
-    raise RuntimeError(f"ffmpeg not found: {FFMPEG}")
+if not EDGE_TTS_DIR.is_dir():
+    raise RuntimeError(f"Edge TTS package not found: {EDGE_TTS_DIR}")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--start-index", type=int, default=0, help="Resume at this zero-based sorted job index")
 parser.add_argument("--ids", nargs="*", help="Generate only these narration IDs")
 parser.add_argument("--images-only", action="store_true", help="Generate only image-description narration")
 parser.add_argument("--manual-edits", action="store_true", help="Generate narration changed by the latest manual text sync")
+parser.add_argument("--only-non-edge", action="store_true", help="Resume by generating only files not yet encoded by Edge TTS")
 args = parser.parse_args()
 if args.manual_edits:
     manual_base_ids = {
@@ -125,6 +136,15 @@ elif args.ids:
     selected = [job for job in jobs if job[0] in set(args.ids)]
 else:
     selected = jobs[args.start_index:]
+if args.only_non_edge:
+    def is_edge_audio(job: tuple[str, str]) -> bool:
+        result = subprocess.run(
+            ["ffprobe", "-v", "error", "-select_streams", "a:0",
+             "-show_entries", "stream=bit_rate", "-of", "default=nw=1:nk=1",
+             str(audio_path(job[0]))], capture_output=True, text=True,
+        )
+        return result.returncode == 0 and result.stdout.strip() == "48000"
+    selected = [job for job in selected if not is_edge_audio(job)]
 base_jobs = [job for job in selected if not job[0].endswith("_easy_read")]
 easy_jobs = [job for job in selected if job[0].endswith("_easy_read")]
 completed = 0 if args.ids or args.images_only or args.manual_edits else args.start_index
@@ -141,5 +161,4 @@ for phase in (base_jobs, easy_jobs):
             if completed % 100 == 0 or completed == total:
                 print(f"[{completed}/{total}] {text_id}", flush=True)
 
-AUDIOS_PATH.write_text(json.dumps(AUDIOS, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Regenerated {len(jobs)} files with {VOICE} at {SPEAKING_RATE} words per minute; removed {len(missing)} stale mappings.")
+print(f"Regenerated {len(selected)} files with {VOICE} at rate {SPEAKING_RATE}; preserved all audio mappings and filenames.")

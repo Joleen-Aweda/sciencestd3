@@ -17,14 +17,13 @@ assert normalize_spoken("pg053_n0031", "(i)") == "(i)"
 all_audio = (ROOT / "tools/regenerate_all_male_audio.py").read_text(encoding="utf-8")
 review_audio = (ROOT / "tools/regenerate_review_audio.py").read_text(encoding="utf-8")
 assert '"pg047_n0027": "Materials: Two healthy potted plants' in review_audio
-assert 'VOICE = "Reed (English (UK))"' in all_audio
-assert 'VOICE = "Reed (English (UK))"' in review_audio
-assert 'SPEAKING_RATE = "140"' in all_audio
-assert 'SPEAKING_RATE = "140"' in review_audio
+assert 'VOICE = "en-US-GuyNeural"' in all_audio
+assert 'SPEAKING_RATE = "-5%"' in all_audio
+assert "edge_tts.Communicate" in all_audio
 assert '"pg001_n0018": "I S B N.' in review_audio
 assert '"pg002_n0004": "I S B N.' in review_audio
 assert '"pg010_n0024": "Letter c."' in review_audio
 assert '"pg037_n0055": "Walk around your home or school compound. And"' in review_audio
 assert "Daniel" not in all_audio + review_audio
 
-print("PASS: Roman numerals, one adult male voice, and the slower narration rate are configured.")
+print("PASS: Roman numerals and en-US-GuyNeural at -5% are configured.")
