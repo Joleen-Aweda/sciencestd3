@@ -9,27 +9,66 @@
     <meta name="page-section-id" content="52" />
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="./assets/fonts.css?v=88" rel="stylesheet">
+    <link href="./assets/fonts.css?v=100" rel="stylesheet">
+    <style>
+      .vocabulary-list {
+        display: grid !important;
+        grid-template-columns: 270px minmax(0, 1fr) !important;
+        column-gap: 44px !important;
+        row-gap: 46px !important;
+        align-items: start !important;
+        border: 2px dashed #8b5cf6 !important;
+        padding: 6px 6px 10px !important;
+      }
+      .vocabulary-term {
+        font-size: 44px !important;
+        line-height: 1.25 !important;
+        font-weight: 800 !important;
+        font-style: italic !important;
+      }
+      .vocabulary-definition {
+        font-size: 42px !important;
+        line-height: 1.28 !important;
+        font-style: italic !important;
+      }
+      @media (max-width: 1200px) {
+        .vocabulary-list {
+          grid-template-columns: 220px minmax(0, 1fr) !important;
+          column-gap: 34px !important;
+          row-gap: 34px !important;
+        }
+        .vocabulary-term { font-size: 34px !important; }
+        .vocabulary-definition { font-size: 32px !important; }
+      }
+      @media (max-width: 640px) {
+        .vocabulary-list {
+          grid-template-columns: 1fr !important;
+          row-gap: 8px !important;
+        }
+        .vocabulary-term { margin-top: 14px !important; font-size: 22px !important; }
+        .vocabulary-definition { font-size: 19px !important; }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div id="content" class="mx-auto w-full bg-white px-10 py-10 max-lg:px-8 max-sm:px-5 max-sm:py-6 opacity-0">
-        <section data-section-type="boxed_text" data-section-id="pg040_sec001" class="relative mx-auto max-w-5xl text-slate-800">
-          <h1 data-id="pg040_n0009" class="mb-8 text-[42px] font-extrabold italic leading-none text-orange-500 max-lg:text-[38px] max-sm:mb-6 max-sm:text-[30px]">Vocabulary</h1>
+      <div id="content" class="mx-auto w-full bg-gradient-to-r from-sky-100 via-white to-white px-14 py-10 max-lg:px-8 max-sm:px-5 max-sm:py-6 opacity-0">
+        <section data-section-type="boxed_text" data-section-id="pg040_sec001" class="relative mx-auto w-full max-w-[88rem] text-slate-800">
+          <h1 data-id="pg040_n0009" class="mb-10 font-extrabold italic leading-none max-sm:mb-5" style="font-size: 58px !important; color: #f57c00 !important;">Vocabulary</h1>
 
-          <div class="grid grid-cols-[250px_minmax(0,1fr)] gap-x-14 gap-y-10 border border-dashed border-violet-500 px-1 py-2 max-lg:grid-cols-[210px_minmax(0,1fr)] max-lg:gap-x-8 max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-3 max-sm:px-3">
-            <div data-id="pg040_n0012" class="text-[34px] font-extrabold italic leading-tight text-slate-900 max-lg:text-[30px] max-sm:text-[26px]">Organ</div>
-            <div class="text-[30px] italic leading-[1.35] text-slate-800 max-lg:text-[27px] max-sm:text-[23px]">
+          <div class="vocabulary-list">
+            <div data-id="pg040_n0012" class="vocabulary-term text-slate-900">Organ</div>
+            <div class="vocabulary-definition text-slate-800">
               <span data-id="pg040_n0013">part of the body which performs a specific function.</span>
-              <span data-id="pg040_n0014" class="block">Example of organs are ears, nose, tongue, eyes and skin</span>
+              <span data-id="pg040_n0014"> Example of organs are ears, nose, tongue, eyes and skin</span>
             </div>
 
-            <div data-id="pg040_n0016" class="text-[34px] font-extrabold italic leading-tight text-slate-900 max-lg:text-[30px] max-sm:mt-2 max-sm:text-[26px]">Taste buds</div>
-            <div data-id="pg040_n0017" class="text-[30px] italic leading-[1.35] text-slate-800 max-lg:text-[27px] max-sm:text-[23px]">special cells in the tongue with nerves that collect information about the taste of food</div>
+            <div data-id="pg040_n0016" class="vocabulary-term text-slate-900">Taste buds</div>
+            <div data-id="pg040_n0017" class="vocabulary-definition text-slate-800">special cells in the tongue with nerves that collect information about the taste of food</div>
 
-            <div data-id="pg040_n0019" class="text-[34px] font-extrabold italic leading-tight text-slate-900 max-lg:text-[30px] max-sm:mt-2 max-sm:text-[26px]">Umami</div>
-            <div data-id="pg040_n0020" class="text-[30px] italic leading-[1.35] text-slate-800 max-lg:text-[27px] max-sm:text-[23px]">a combination of tastes which are found in foods such as meat, milk and fish</div>
+            <div data-id="pg040_n0019" class="vocabulary-term text-slate-900">Umami</div>
+            <div data-id="pg040_n0020" class="vocabulary-definition text-slate-800">a combination of tastes which are found in foods such as meat, milk and fish</div>
           </div>
         </section>
       </div>
@@ -37,8 +76,8 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=88"></script>
-    <script src="./assets/sign-language-page-player.js?v=88"></script>
+    <script src="./assets/offline-preloader.js?v=100"></script>
+    <script src="./assets/sign-language-page-player.js?v=100"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js?v=22"></script>
 </body>
