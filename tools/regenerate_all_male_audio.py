@@ -69,6 +69,16 @@ OVERRIDES = load_existing_overrides() | {
 VOICE = "en-US-GuyNeural"
 SPEAKING_RATE = "-5%"
 
+# Tanzanian names are clearer in the Tanzanian Swahili male voice while the
+# surrounding English narration keeps the book's standard GuyNeural voice.
+DAUDI_NAME_IDS = {
+    "pg004_n0010", "pg004_n0013", "pg004_n0016", "pg004_n0019", "pg004_n0022",
+}
+VOICE_OVERRIDES = {
+    **{text_id: "sw-TZ-DaudiNeural" for text_id in DAUDI_NAME_IDS},
+    **{text_id + "_easy_read": "sw-TZ-DaudiNeural" for text_id in DAUDI_NAME_IDS},
+}
+
 
 def spoken(text_id: str, value: str) -> str:
     value = OVERRIDES.get(text_id, value)
@@ -96,7 +106,7 @@ def generate(job: tuple[str, str]) -> str:
         for attempt in range(1, 5):
             try:
                 asyncio.run(edge_tts.Communicate(
-                    spoken(text_id, value), VOICE, rate=SPEAKING_RATE,
+                    spoken(text_id, value), VOICE_OVERRIDES.get(text_id, VOICE), rate=SPEAKING_RATE,
                     connect_timeout=15, receive_timeout=45,
                 ).save(str(generated)))
                 if generated.stat().st_size <= 1000:
@@ -161,4 +171,4 @@ for phase in (base_jobs, easy_jobs):
             if completed % 100 == 0 or completed == total:
                 print(f"[{completed}/{total}] {text_id}", flush=True)
 
-print(f"Regenerated {len(selected)} files with {VOICE} at rate {SPEAKING_RATE}; preserved all audio mappings and filenames.")
+print(f"Regenerated {len(selected)} files with configured voices at rate {SPEAKING_RATE}; preserved all audio mappings and filenames.")
