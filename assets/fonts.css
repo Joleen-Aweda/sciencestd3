@@ -80,24 +80,31 @@ body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
   font-weight: 400;
 }
 
-#content :where(h1, h2),
-#content :where(h1, h2) [data-id] {
-  font-size: 60px !important;
+#content section:not([data-section-id="pg001_sec001"]) h1,
+#content section:not([data-section-id="pg001_sec001"]) h1 [data-id] {
+  font-size: 32px !important;
   font-weight: 800 !important;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
 }
 
-#content :where(h3, h4, h5, h6),
-#content :where(h3, h4, h5, h6) [data-id] {
-  font-size: 36px !important;
+#content section:not([data-section-id="pg001_sec001"]) h2,
+#content section:not([data-section-id="pg001_sec001"]) h2 [data-id] {
+  font-size: 28px !important;
   font-weight: 800 !important;
-  line-height: 1.111 !important;
+  line-height: 1.2 !important;
 }
 
-#content :where(h3, h4, h5, h6)[class*='text-5xl'],
-#content :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
-  font-size: 48px !important;
-  line-height: 1 !important;
+#content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6),
+#content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6) [data-id] {
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+#content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'],
+#content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
+  font-size: 24px !important;
+  line-height: 1.2 !important;
 }
 
 @media (max-width: 1024px) {
@@ -110,19 +117,21 @@ body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
     font-size: 24px !important;
   }
 
-  #content :where(h1, h2),
-  #content :where(h1, h2) [data-id] {
-    font-size: 48px !important;
+  #content section:not([data-section-id="pg001_sec001"]) h1,
+  #content section:not([data-section-id="pg001_sec001"]) h1 [data-id] {
+    font-size: 28px !important;
   }
 
-  #content :where(h3, h4, h5, h6),
-  #content :where(h3, h4, h5, h6) [data-id] {
-    font-size: 30px !important;
+  #content section:not([data-section-id="pg001_sec001"]) h2,
+  #content section:not([data-section-id="pg001_sec001"]) h2 [data-id] {
+    font-size: 24px !important;
   }
 
-  #content :where(h3, h4, h5, h6)[class*='text-5xl'],
-  #content :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
-    font-size: 40px !important;
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6),
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6) [data-id],
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'],
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
+    font-size: 22px !important;
   }
 }
 
@@ -136,15 +145,20 @@ body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
     font-size: 20px !important;
   }
 
-  #content :where(h1, h2),
-  #content :where(h1, h2) [data-id] {
-    font-size: 30px !important;
+  #content section:not([data-section-id="pg001_sec001"]) h1,
+  #content section:not([data-section-id="pg001_sec001"]) h1 [data-id] {
+    font-size: 22px !important;
   }
 
-  #content :where(h3, h4, h5, h6),
-  #content :where(h3, h4, h5, h6) [data-id],
-  #content :where(h3, h4, h5, h6)[class*='text-5xl'],
-  #content :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
-    font-size: 24px !important;
+  #content section:not([data-section-id="pg001_sec001"]) h2,
+  #content section:not([data-section-id="pg001_sec001"]) h2 [data-id] {
+    font-size: 20px !important;
+  }
+
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6),
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6) [data-id],
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'],
+  #content section:not([data-section-id="pg001_sec001"]) :where(h3, h4, h5, h6)[class*='text-5xl'] [data-id] {
+    font-size: 18px !important;
   }
 }
