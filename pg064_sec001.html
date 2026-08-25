@@ -9,7 +9,7 @@
     <meta name="page-section-id" content="85" />
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
-    <link href="./assets/fonts.css?v=102" rel="stylesheet">
+    <link href="./assets/fonts.css?v=105" rel="stylesheet">
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -18,12 +18,44 @@
     </main>
 
     <script type="text/javascript">
+        (() => {
+            const sequence = [
+                ["pg064_n0007", "Column 1, Animals"],
+                ["pg064_n0013", "(a) Eagle"],
+                ["pg064_n0020", "(b) Tilapia"],
+                ["pg064_n0027", "(c) Goat"],
+                ["pg064_n0034", "(d) Frog"],
+                ["pg064_n0041", "(e) Lizard"],
+                ["pg064_n0009", "Column 2, Groups"],
+                ["pg064_n0016", "(i) Mammals"],
+                ["pg064_n0023", "(ii) Reptiles"],
+                ["pg064_n0030", "(iii) Amphibians"],
+                ["pg064_n0037", "(iv) Birds"],
+                ["pg064_n0044", "(v) Fish"],
+            ];
+            sequence.forEach(([id]) => {
+                document.querySelectorAll(`[data-id="${id}"]`).forEach((element) => {
+                    element.setAttribute("data-duplicate-id", id);
+                    element.removeAttribute("data-id");
+                });
+            });
+            const narration = document.createElement("div");
+            narration.className = "sr-only";
+            narration.setAttribute("aria-label", "Table narration by columns");
+            sequence.forEach(([id, text]) => {
+                const span = document.createElement("span");
+                span.setAttribute("data-id", id);
+                span.textContent = text;
+                narration.appendChild(span);
+            });
+            document.querySelector('[data-id="pg064_n0003"]')?.parentElement?.after(narration);
+        })();
         window.correctAnswers = JSON.parse('{"item-1":"dropzone-4","item-2":"dropzone-5","item-3":"dropzone-1","item-4":"dropzone-3","item-5":"dropzone-2"}');
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/offline-preloader.js?v=102"></script>
-    <script src="./assets/sign-language-page-player.js?v=102"></script>
+    <script src="./assets/offline-preloader.js?v=105"></script>
+    <script src="./assets/sign-language-page-player.js?v=105"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js?v=22"></script>
 </body>

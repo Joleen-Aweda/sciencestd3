@@ -113,6 +113,7 @@ SPOKEN_OVERRIDES = {
     "pg064_n0030": "Roman three. Amphibians",
     "pg064_n0037": "Roman four. Birds",
     "pg064_n0044": "Roman five. Fish",
+    "pg089_n0003": "Simple I. C. T. games.",
 }
 
 # The tongue diagram intentionally places two physical regions for sour and
