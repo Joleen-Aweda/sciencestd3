@@ -63,7 +63,7 @@ for text_id, filename in AUDIOS.items():
     assert audio.exists(), f"missing narration file for {text_id}: {filename}"
     assert audio.stat().st_size > 1000, f"invalid narration file for {text_id}: {filename}"
 
-assert image_count == 186, f"expected 186 displayed images, found {image_count}"
+assert image_count == 187, f"expected 187 displayed images, found {image_count}"
 for required in (
     "pg001_im001", "pg005_im006", "pg008_n0004", "pg009_n0006",
     "pg009_n0008", "pg009_n0010", "pg041_n0013", "pg041_n0014",
