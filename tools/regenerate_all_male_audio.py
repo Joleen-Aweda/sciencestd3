@@ -69,15 +69,9 @@ OVERRIDES = load_existing_overrides() | {
 VOICE = "en-US-GuyNeural"
 SPEAKING_RATE = "-5%"
 
-# Tanzanian names are clearer in the Tanzanian Swahili male voice while the
-# surrounding English narration keeps the book's standard GuyNeural voice.
-DAUDI_NAME_IDS = {
-    "pg004_n0010", "pg004_n0013", "pg004_n0016", "pg004_n0019", "pg004_n0022",
-}
-VOICE_OVERRIDES = {
-    **{text_id: "sw-TZ-DaudiNeural" for text_id in DAUDI_NAME_IDS},
-    **{text_id + "_easy_read": "sw-TZ-DaudiNeural" for text_id in DAUDI_NAME_IDS},
-}
+# Use the main acknowledgement narrator for every clip. Program names,
+# Tanzanian names, image descriptions and Easy Read text must not switch voice.
+VOICE_OVERRIDES: dict[str, str] = {}
 
 
 def spoken(text_id: str, value: str) -> str:
