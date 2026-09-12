@@ -13,7 +13,14 @@
     // Storage can be unavailable in private or embedded browsing contexts.
   }
 
-  function currentPageNumber() {
+  function currentVideoNumber() {
+    const value = document.querySelector('meta[name="video-page-id"]')?.content
+      || document.querySelector('meta[name="page-section-id"]')?.content;
+    const pageNumber = Number.parseInt(value || "", 10);
+    return Number.isFinite(pageNumber) ? pageNumber : null;
+  }
+
+  function currentDisplayNumber() {
     const value = document.querySelector('meta[name="page-section-id"]')?.content;
     const pageNumber = Number.parseInt(value || "", 10);
     return Number.isFinite(pageNumber) ? pageNumber : null;
@@ -151,14 +158,15 @@
     // so start narration before waiting for the video mapping or metadata.
     startNarrationIfNeeded();
 
-    const pageNumber = currentPageNumber();
-    if (!pageNumber) return;
+    const videoNumber = currentVideoNumber();
+    const displayNumber = currentDisplayNumber() || videoNumber;
+    if (!videoNumber) return;
     const mappings = await loadVideoMappings();
-    const filename = mappings[`video-${pageNumber}`];
+    const filename = mappings[`video-${videoNumber}`];
     if (!filename) return;
 
     const videoUrl = `./content/i18n/${currentLanguage()}/video/${encodeURIComponent(filename)}`;
-    createPlayer(videoUrl, pageNumber);
+    createPlayer(videoUrl, displayNumber);
     setButtonState(true);
   }
 
