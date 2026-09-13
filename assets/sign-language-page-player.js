@@ -76,6 +76,55 @@
     }, disabledButton ? 0 : 100);
   }
 
+  function makeDraggable(container, header) {
+    let drag = null;
+
+    header.setAttribute("role", "button");
+    header.setAttribute("tabindex", "0");
+    header.setAttribute("aria-label", "Drag sign language video to move it");
+    header.style.cursor = "move";
+    header.style.touchAction = "none";
+    header.style.userSelect = "none";
+
+    function clampPosition(left, top) {
+      const maxLeft = Math.max(0, window.innerWidth - container.offsetWidth);
+      const maxTop = Math.max(0, window.innerHeight - container.offsetHeight);
+      container.style.left = `${Math.min(maxLeft, Math.max(0, left))}px`;
+      container.style.top = `${Math.min(maxTop, Math.max(0, top))}px`;
+      container.style.right = "auto";
+      container.style.bottom = "auto";
+    }
+
+    header.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 || event.target.closest("button")) return;
+      const rect = container.getBoundingClientRect();
+      drag = { id: event.pointerId, offsetX: event.clientX - rect.left, offsetY: event.clientY - rect.top };
+      header.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    });
+    header.addEventListener("pointermove", (event) => {
+      if (!drag || event.pointerId !== drag.id) return;
+      clampPosition(event.clientX - drag.offsetX, event.clientY - drag.offsetY);
+    });
+    function finishDrag(event) {
+      if (drag?.id === event.pointerId) drag = null;
+    }
+    header.addEventListener("pointerup", finishDrag);
+    header.addEventListener("pointercancel", finishDrag);
+    header.addEventListener("keydown", (event) => {
+      const movement = { ArrowLeft: [-20, 0], ArrowRight: [20, 0], ArrowUp: [0, -20], ArrowDown: [0, 20] }[event.key];
+      if (!movement) return;
+      const rect = container.getBoundingClientRect();
+      clampPosition(rect.left + movement[0], rect.top + movement[1]);
+      event.preventDefault();
+    });
+    window.addEventListener("resize", () => {
+      if (!container.isConnected || container.style.left === "") return;
+      const rect = container.getBoundingClientRect();
+      clampPosition(rect.left, rect.top);
+    });
+  }
+
   function createPlayer(videoUrl, pageNumber) {
     const container = document.createElement("aside");
     container.id = PLAYER_ID;
@@ -121,6 +170,7 @@
     });
     closeButton.addEventListener("click", closePlayer);
     header.appendChild(closeButton);
+    makeDraggable(container, header);
 
     const video = document.createElement("video");
     video.src = videoUrl;
